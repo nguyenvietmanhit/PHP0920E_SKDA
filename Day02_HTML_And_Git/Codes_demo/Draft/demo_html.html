@@ -1,0 +1,197 @@
+<!-- demo_html.html -->
+<!-- dùng phím tắt Ctrl + / để comment
+1 - KHái niệm HTML
++ Viết tắt của HyperText Markup Language
++ Về quy trình làm web, sẽ theo thứ tự sau:
+HTML -> CSS -> Javascript -> PHP
++ HTML có nhiều phiên bản, mới nhất hiện tại là HTML5
+2 - Cấu trúc 1 trang HTML
+-->
+<!DOCTYPE html>
+<!-- Thẻ html là thẻ cha to nhất, bao lấy tất
+cả các thẻ còn lại -->
+<html>
+	<!-- Thẻ <head> dùng mô tả thông tin cho trang, vd: tiêu đề, nhúng các link css, js... -->
+	<head>
+		<!-- Thẻ meta là thẻ khuyết, charset=utf-8 hỗ trợ hiển thị ký tự có dấu trên trang -->
+		<meta charset="utf-8" />
+		<!-- Thẻ title hiển thị tiêu đề trang -->
+		<title>Tiêu đề trang web</title>
+	</head>
+	<!-- Thẻ body là thẻ chứa các nội dung sẽ hiển thị ra trình duyệt tới user -->
+	<body>
+		Hello, World
+		<!-- Học HTML là học cú pháp các thẻ, và cách hiển thị của các thẻ đó -->
+		<!--
+		Thẻ h - heading - có các thẻ từ h1 -> h6, tương đương kích cỡ chữ sẽ giảm dần từ h1 -> h6
+		Thẻ h là thẻ đầy đủ, thường dùng trong SEO web
+		Quy tắc viết thẻ: viết thẻ mở r viết thẻ đóng luôn, sau đó mới đi viết nội dung bên trong
+		 -->
+		 <h1>Thẻ h1</h1>
+		 <h2>Thẻ h2</h2>
+		 <h3>Thẻ h3</h3>
+		 <h4>Thẻ h4</h4>
+		 <h5>Thẻ h5</h5>
+		 <h6>Thẻ h6</h6>
+		 <!-- Thẻ p - paragraph - đoạn văn, cách nhau bởi 1 dòng trắng -->
+		 <p>Thẻ p1</p>
+		 <p>Thẻ p2</p>
+		 <!-- Thẻ br - break - Thẻ khuyết, xuống dòng, trong phần mềm code HTML sẽ ko hiểu ký tự Enter xuống dòng, mà phải dùng thẻ br để xuống dòng -->
+		 Đây là nội dung <br />
+		 sẽ bị xuống dòng
+		 <!-- Thẻ hr - horizontal - tạo 1 đường kẻ ngang, là thẻ khuyết -->
+		 <hr />
+		 <!-- Thẻ i - italic - thẻ đầy đủ - in nghiêng text -->
+		 <i>In nghiêng</i>
+		 <!-- Thẻ b - bold - thẻ đầy đủ - in đậm text -->
+		 <b>In đậm</b>
+		 <!-- Thẻ u - underline - thẻ đầy đủ - gạch chân text -->
+		 <u>Gạch chân</u>
+		 <!-- Thẻ div - thẻ đầy đủ - dùng để bao lấy các thẻ khác, dùng trong việc xây dựng các khối trên trang, thẻ này thường phải kết hợp với CSS thì mới có tác dụng -->
+		 <div>Nội dung thẻ div</div>
+		 Nội dung thông thường
+		 <div>
+		 	<h1>Thẻ h1</h1>
+		 	<b>Thẻ b</b>
+		 	<div>Thẻ div</div>
+		 </div>
+		 <!-- Thẻ span - Thẻ đầy đủ - dùng để định dạng lại text nào đó trong 1 khối văn bản, luôn kết hợp với CSS -->
+		 <span>nội dung thẻ span</span>
+		 Nội dung bên ngoài span
+		 <!-- Thẻ meta - thẻ khuyết - định nghĩa ra các siêu dữ liệu trên trang, khai báo các thẻ meta bên trong <head> -->
+	 	<!-- Thẻ img - thẻ khuyết - hiển thị ảnh trên trang web, sẽ có 1 số thuộc tính sau:
+	 	+ src: đường dẫn tới file ảnh, sử dụng đường dẫn tương đối để nhúng file, xác định đường dẫn tương đối như sau: vị trí file muốn nhúng vào so với file hiện tại
+	 	+ title: text hiển thị khi rê chuột(hover) qua ảnh
+	 	+ alt: text hiển thị khi đường dẫn ảnh ko tồn tại
+	 	+ width: chiều dài ảnh
+	 	+ height: chiều rộng ảnh
+	 	Copy 1 file ảnh mẫu cùng cấp với file code hiện tại
+	 	   -->
+	 	<img src="image.png" width="80" height="50" title="Rê chuột qua" alt="Thuộc tính alt" />
+
+	 	<!-- Các thẻ liên quan đến bảng -->
+	 	<table border="1" cellspacing="0" cellpadding="8">
+	 		<!-- Thẻ tr - table row - hàng -->
+	 		<tr>
+	 			<!-- thẻ th - table heading - cột chứa tiêu đề của bảng, text bên trong thẻ th sẽ bôi đậm và căn giữa -->
+	 			<th>Name</th>
+	 			<th>Age</th>
+	 			<th>Address</th>
+	 		</tr>
+	 		<tr>
+	 			<!-- Thẻ td - table data - cột chứa dữ liệu -->
+	 			<!-- gộp cột sử dụng thuộc tính colspan cho thẻ <td>, và khi gộp luôn phải giữ đc cấu trúc ban đầu của bảng -->
+	 			<td colspan="2">Mạnh</td>
+	 			<!-- <td>30</td> -->
+	 			<!-- gộp hàng sử dụng thuộc tính rowspan trên thẻ td, và khi gộp hàng luôn giữ cấu trúc ban đầu của bảng -->
+	 			<td rowspan="2">Hoài Đức - Hà Nội</td>
+	 		</tr>
+	 		<tr>
+	 			<!-- Thẻ td - table data - cột chứa dữ liệu -->
+	 			<td>Mạnh</td>
+	 			<td>30</td>
+	 			<!-- <td>Hoài Đức - Hà Nội</td> -->
+	 		</tr>
+	 	</table>
+
+	 	<!-- Thẻ ul, ol, li - các thẻ đầy đủ dạng danh sách -->
+	 	<!-- Thẻ ul - unorder list, li: thẻ danh sách ko có thứ tự -->
+	 	<ul>
+	 		<li>Thẻ li thứ nhất</li>
+	 		<li>Thẻ li thứ 2</li>
+	 		<li>Thẻ li thứ 3</li>
+	 	</ul>
+	 	<!-- Thẻ ol - orderlist - li, thẻ danh sách có thứ tự -->
+	 	<ol>
+	 		<li>Thẻ li thứ nhất</li>
+	 		<li>Thẻ li thứ 2</li>
+	 		<li>Thẻ li thứ 3</li>
+	 	</ol>
+	 	<!-- Thẻ a - thẻ đầy đủ - là 1 link  -->
+	 	<a href="https://google.vn" target="_blank">Click vào thẻ này để chuyển hướng
+	 	về trang Google</a>
+
+	 	<!-- Các thẻ html liên quan đến form:
+	 	<form>, <input>, <textarea>, <select>, <option>
+	 	 -->
+	 	 <form>
+	 	 	Username:
+	 	 	<input type="text" />
+	 	 	Password:
+	 	 	<input type="password" />
+	 	 	<input type="submit" value="Login" />
+	 	 </form>
+	 	 <!-- Form là nơi lấy thông tin từ user, sử dụng thẻ <form> để xây dựng, luôn dùng thẻ <form> này để bao lấy các input bên trong, mặc dù về mặt hiển thị, có hay ko có thẻ <form> cũng ko ảnh hưởng gì cả 
+		 Thẻ form có các thuộc tính sau:
+		 + action: url sẽ xử lý submit form, học ở phần PHP
+		 + method: phương thức xử lý form, có 2 phương thức GET và POST
+	 	 -->
+	 	 <form action="" method="GET">
+	 	 	<!--
+	 	 	Trong form sẽ có các input để user có thể nhập liệu. Thẻ <input /> là thẻ dạng khuyết có tác dụng tạo ra các nơi nhập dữ liệu cho user, thẻ này có 1 số thuộc tính sau:
+	 	 	+ type: kiểu nhập dữ liệu, có các giá trị sau: text, number, password, reset, radio, checkbox, file,  submit, hidden
+	 	 	+ name: dùng khi code PHP
+	 	 	+ value: giá trị khởi tạo mặc định cho input đó
+	 	 	+ placeholder: là text gợi nhớ cho chức năng của input
+	 	 	+ multilpe: áp dụng cho thẻ select, input file, cho phép chọn nhiều 
+	 	 	+ selected: chọn sẵn giá trị cho thẻ <select>
+	 	 	+ checked: chọn sẵn giá trị cho radio hoặc checkbox
+	 	 	-->
+	 	 	Nhập tên:
+	 	 	<input type="text" value="Mạnh" />
+	 	 	<br />
+	 	 	Nhập tuổi:
+	 	 	<!--  -->
+	 	 	<!-- thuộc tính required: bắt buộc phải nhập thông tin vào trường đó -->
+	 	 	<input type="number" placeholder="Mời bạn nhập tuổi" required min="10" />
+	 	 	<br />
+	 	 	Nhập mật khẩu:
+	 	 	<input type="password" />
+	 	 	<br />
+	 	 	Chọn giới tính:
+	 	 	<!-- với input radio, bắt buộc phải khai báo thuộc tính name , giá trị phải trùng nhau giữa các radio, thì chức năng radio mới hoạt động chính xác đc -->
+	 	 	<input type="radio" name="gender" value="0" /> Nữ
+	 	 	<input type="radio" name="gender" value="1" /> Nam
+	 	 	<br />
+	 	 	Chọn nghề nghiệp:
+	 	 	<input type="checkbox" value="0" /> Giảng viên
+	 	 	<input type="checkbox" value="1" />
+	 	 	Developer
+	 	 	<br />
+	 	 	Upload 1 ảnh:
+	 	 	<input type="file" />
+	 	 	<br />
+	 	 	Upload nhiều ảnh cùng 1 lúc:
+	 	 	<input type="file" multiple />
+	 	 	<br />
+	 	 	Ghi chú:
+	 	 	<!-- Textarea là 1 cặp thẻ đầy đủ, chú ý ko đc để nội dung gì bên trong cặp thẻ này nếu ko có giá trị mặc định -->
+	 	 	<textarea maxlength="5" placeholder="Nhập ghi chú tại đây" cols="20" rows="8"></textarea>
+	 	 	<br />
+	 	 	Chọn quốc gia:
+	 	 	<!-- Thẻ select luôn đi kèm với các thẻ option bên trong -->
+	 	 	<select>
+	 	 		<option value="0">VN</option>
+	 	 		<option value="1">Japan</option>
+	 	 		<option value="2">USA</option>
+	 	 	</select>
+	 	 	<br />
+	 	 	Chọn nhiều quốc gia:
+	 	 	<select multiple>
+	 	 		<option value="0">VN</option>
+	 	 		<option value="1">Japan</option>
+	 	 		<option value="2">USA</option>
+	 	 	</select>
+	 	 	<!-- 1 form bao giờ cũng có 1 nút submit - nút gửi thông tin đi -->
+	 	 	<input type="submit" value="Show thông tin" />
+	 	 	<input type="reset" value="Xóa thông tin form" >
+	 	 </form>
+
+	 	 <!-- Thẻ button: thẻ đầy đủ - tạo ra nút có thể chứa text hoặc ảnh, và click đc -> khác các input trong form -->
+	 	 <button>Button</button>
+	 	 <!-- Thẻ center - chỉ dùng cho việc làm bài tập buổi 1 - căn giữa nội dung bên trong, khi học CSS thì sẽ ko dùng thẻ này nữa -->
+	 	 <center>Nội dung bị căn giữa</center>
+	 	 <!-- 1 số thẻ liên quan đến HTML5 như thẻ <header>, <article>, <aside>, <footer>, <nav> ..., thể hiện đúng ngữ nghĩa hơn cho các thành phần trên trang -->
+	</body>
+
+</html>
