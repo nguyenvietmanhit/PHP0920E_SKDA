@@ -1,0 +1,150 @@
+<!--
+	Tạo 1 file demo_html.html
+	+ Dùng phím tắt Ctrl + / để comment code
+	+ Tạo 1 cấu trúc cơ bản của 1 trang HTML
+-->
+<!-- aa -->
+<!--
+Chú ý:
++ Đuôi file luôn phải là .html
++ HTML đặc trưng bởi các thẻ / tag, thẻ trong HTML có 2 dạng: 
+Thẻ đầy đủ: có cả thẻ đóng và thẻ mở, giữa sẽ là nội dung của thẻ
+Thẻ khuyết: chỉ có thẻ mở, và đóng luôn ở thẻ mở này
++ Cách khai báo thẻ: viết thẻ mở trước, viết luôn thẻ đóng, viết nội dung cho thẻ
++ Dùng phím tab để nhìn code thể hiện theo cấp cho dễ quản lý
+
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- CHo phép trang hiển thị các ký tự UTF-8 -->
+		<meta charset="UTF-8" />
+		<title>Title page</title>
+	</head>
+	<body>
+		Hello world dsasasa
+
+		<!-- Thẻ h1 - h6: Các thẻ liên quan đến heading, dùng để đặt cho các tiêu đề -->
+		<!-- Nên sử dụng Chrome khi học Web, dùng ngôn ngữ trình duyệt là tiếng Anh -->
+		<h1>Thẻ h1</h1>
+		<h2>Thẻ h2</h2>
+		<h3>Thẻ h3</h3>
+		<h4>Thẻ h4</h4>
+		<h5>Thẻ h5</h5>
+		<h6>Thẻ h6</h6>
+		<!-- Thẻ p - paragraph  - mô tả 1 đoạn văn bản - thẻ đầy đủ -->
+		<p>Thẻ p1</p>
+		<p>Thẻ p2</p>
+		<!-- Thẻ hr - Tạo ra 1 đường kẻ ngang - horizontal, là thẻ khuyết, các thẻ khuyết sẽ ko có nội dung bên trong, mà nội dung sẽ thể hiện thông qua các thuộc tính của thẻ -->
+		<hr />
+		<!-- Thẻ br - Thẻ xuống dòng - break - là 1 thẻ khuyết, file .html ko hiểu các ký tự enter để xuống dòng, mà phải sử dụng thẻ <br /> -->
+		Đoạn này có bị <br />
+		xuống dòng ko ?
+		<!-- Thẻ i - in nghiêng - italic, thẻ đầy đủ -->
+		<i>In nghiêng</i>
+		<!-- Thẻ b - in đậm - bold, thẻ đầy đủ-->
+		<b>In đậm</b>
+		<!-- Thẻ u - gạch chân - underline, thẻ đầy đủ -->
+		<u>Gạch chân</u>
+		<!-- Thẻ div - Tạo các khối chứa các thẻ con khác, dùng để xây dựng cấu trúc 1 trang - division, thẻ đầy đủ -->
+		<!-- <div>Thẻ div</div>
+		Thẻ div -->
+		<div>
+			<u>Thẻ u</u>
+			<p>Thẻ p</p>
+			<div>Thẻ div</div>
+		</div>
+		<!-- Thẻ span - chỉ có tác dụng khi kết hợp với CSS, style lại các đoạn text cùng cấp, thẻ đầy đủ -->
+		<p>
+			Thẻ p với <span>nội dung màu đỏ</span>
+		</p>
+		<!-- Thẻ meta: ko hiển thị trong nội dung trang web, dùng để cấu hình các thông tin của trang như seo ..., khai báo ở trong <head>, thẻ khuyết-->
+		<!-- Thẻ img - Hiển thị ảnh - image, thẻ khuyết, copy 1 ảnh bất kỳ vào cùng cấp với file .html hiện tại
+		Đường dẫn trong lập trình có 2 kiểu:
+		- Đường dẫn tương đối: file muốn nhúng ở vị trí nào so với file hiện tại
+		- Đường dẫn tuyệt đối: đường dẫn của file tính từ ổ vật lý
+		Luôn sử dụng đường dẫn tương đối để nhúng file
+		-->
+		<img src="image.jpgsdsadsa" title="Hiển thị khi rê chuột qua ảnh" width="100px" height="100px" alt="Hiển thị khi đường dẫn ảnh ko tồn tại" />
+		<!-- Bảng: table, tr - table row, th - table heading, td - table data, thẻ đầy đủ -->
+		<table border="1" cellspacing="0" cellpadding="8">
+			<tr>
+				<th>Tên</th>
+				<th>Tuổi</th>
+			</tr>
+			<tr>
+				<!-- Sử dụng thuộc tính colspan trên cột muốn gộp -->
+				<td colspan="2">Mạnh</td>
+				<!-- <td>30</td> -->
+			</tr>
+			<tr>
+				<!-- Gộp hàng, sử dụng rowspan -->
+				<td rowspan="2">ABC</td>
+				<td>123</td>
+			</tr>
+			<tr>
+				<!-- <td>DEF</td> -->
+				<td>456</td>
+			</tr>
+		</table>
+
+		<!-- Thẻ ul - unordered list, ol - order-list, li - list - Danh sách, thẻ đầy đủ -->
+		<ul>
+			<li>Li thứ nhất</li>
+			<li>Li thứ 2</li>
+			<li>Li thứ 3</li>
+		</ul>
+		<ol>
+			<li>Li thứ nhất</li>
+			<li>Li thứ 2</li>
+			<li>Li thứ 3</li>
+		</ol>
+		<!-- Thẻ a - Tạo 1 link điều hướng trang web, thẻ đầy đủ -->
+		<a href="https://google.vn" target="_blank">
+			Click để sang trang google
+		</a>
+		<!-- Thẻ button - Tạo 1 nút có thể click, thẻ đầy đủ -->
+		<button>Button</button>
+		<!-- Thẻ center - Căn giữa nội dung bên trong, thẻ đầy đủ, thẻ này chỉ dùng để demo cho làm bài tập -->
+		<center>Căn giữa</center>
+		<!-- Các thẻ liên quan đến form: form, input, textarea, select, option ...
+		Chú ý: luôn sử dụng thẻ <form> bao ngoài cùng tất cả các input bên trong
+		 -->
+		 <form method="post" action="">
+		 	Nhập text:
+		 	<input type="text" placeholder="Nhập tên của bạn" name="fullname" value="Mạnh" />
+		 	<br />
+		 	Nhập password:
+		 	<input type="password" />
+		 	<br />
+		 	Chọn giới tính:
+		 	<!-- Với radio phải set thuộc tính name có giá trị giống nhau giữa các input, thì khi đó chức năng radio mới hoạt động chính xác -->
+		 	<input type="radio" name="gender" /> Nam
+		 	<input type="radio" name="gender" /> Nữ
+		 	<input type="radio" name="gender" checked /> Khác
+		 	<br />
+		 	Chọn nghề nghiệp:
+		 	<input type="checkbox" /> Job 1
+		 	<input type="checkbox" /> Job 2
+		 	<input type="checkbox" checked /> Job 3
+		 	<br />
+		 	Thông tin thêm
+		 	<!-- ko đc để khoảng trống trong nội dung của thẻ <textarea> -->
+		 	<textarea cols="10" rows="20"></textarea>
+		 	<br />
+		 	Chọn quốc gia
+		 	<select>
+		 		<option>VN</option>
+		 		<option>Korea</option>
+		 	</select>
+		 	<br />
+		 	Tải ảnh đại diện
+		 	<input type="file" />
+		 	<br />
+		 	<!-- 1 form ko thể thiếu đc chức năng submit (gửi thông tin đi) -->
+		 	<input type="submit" value="Gửi thông tin" />
+		 	<!-- chức năng xóa thông tin form -->
+		 	<input type="reset" value="Xóa thông tin form" />
+		 </form>
+	</body>
+</html>
