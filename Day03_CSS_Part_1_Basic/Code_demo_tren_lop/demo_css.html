@@ -1,0 +1,251 @@
+<!-- demo_css.html -->
+<!DOCTYPE html />
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Demo CSS</title>
+		<!-- Nhúng file .css bên trong thẻ <head> -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+	<!--
+		CSS
+		1 - Khái niệm:
+		+ Giống như trang trí cho ngôi nhà sau khi xây xong phần thô
+		+ Cascading Style Sheet
+		+ CSS sẽ có các thuật ngữ sau:
+		- Selector: đối tượng/phần tử HTML muốn CSS
+		- Thuộc tính CSS
+		- Giá trị của thuộc tính
+		VD: set màu đỏ cho thẻ p
+		-> selector: thẻ p
+		-> thuộc tính css: color
+		-> giá trị của thuộc tính: red
+		+ Học CSS: học các thuộc tính CSS và các giá trị tương ứng
+		+ Thực tế sẽ code CSS dựa vào công cụ Inspect HTML của trình duyệt
+		2 - Cú pháp khai báo CSS
+		selector {
+			thuộc tính: giá trị;
+		}
+	-->
+	<style type="text/css">
+		/* selector: h1; */
+		/* thuộc tính CSS: color*/
+		/* giá trị: red*/
+		h1 {
+			color: red;
+		}
+
+		/* 3 -  Các loại Selector trong CSS */
+		/* + Selector theo tên thẻ HTML */
+		/* Kiểu selector này có phạm vi trên toàn trang */
+		p {
+			color: yellow;
+		}
+		/* + Selector theo thuộc tính Id và class của thẻ */
+		/* 2 thuộc tính id và class có sẵn với mọi thẻ HTML */
+		/* id: mang tính duy nhất; */
+		/* class: sử dụng chung; */
+		/* Selector theo id, thêm tiền tố # trước tên id */
+		#a-id {
+			color:  red;
+		}
+		/* Selector theo class, thêm tiền tố . trước tên class */
+		.a-class {
+			color:  green;
+		}
+
+		/* + Selector theo cấp */
+		/* Tất cả p trong phần tử có id=div-id sẽ bị css */
+		#div-id p {
+			background: red;
+		}
+		/* Chỉ các thẻ i nào là con trực tiếp của class=iv-parent thì mới bị css */
+		.div-parent > i {
+			color: pink;
+		}
+		/* Ngoài ra còn có các ký tự phân cấp: + ~; */
+		/*  + Selector theo thuộc tính thẻ HTML */
+		/* Chỉ các input có type=text mới bị ăn css */
+		input[type=text] {
+			background: yellow;
+		}
+		/* + Selector theo trạng thái thẻ */
+		/* Một số trạng thái cơ bản: rê chuột qua - hover, theo vị trí trong cấu trúc cha-con, theo vị trí trước-sau ...; */
+		/* CSS theo trạng thái vị trí trong cấu trúc cha-con */
+		/* Lưu ý: chỉ áp dụng với cấu trúc cha-con trực tiếp; */
+		ul li:first-child {
+			color: red;
+		}
+		ul li:last-child {
+			color:  green;
+		}
+		ul li:nth-child(2) {
+			color:  yellow;
+		}
+		/* Seletor theo trạng thái hover */
+		#h3-hover:hover {
+			color:  red;
+		}
+		/* Selector theo trạng thái trước/sau */
+		/* Bắt buộc phải khai báo thuộc tính content với trạng thái này */
+		#a-before-after:before {
+			content:  'BEFORE';
+		}
+		#a-before-after:after {
+			content:  'AFTER';
+		}
+
+		/* 4 - Cách nhúng code CSS vào HTML */
+		/* + Nhúng code CSS inline ngay trong thẻ HTML thông qua thuộc tính style của thẻ:
+		Có độ ưu tiên cao nhất trong 3 cách nhúng, tuy nhiên nếu CSS nhiều -> rối -> nên hạn chế CSS kiểu này; */
+		/* + Nhúng code CSS inline trong file .html thông qua cặp thẻ <style>: ưu điểm: tách đc code CSS ra khỏi HTML, tuy nhiên code CSS sẽ ko có tính sử dụng lại cho các file .html khác; */
+		/* + Nhúng code CSS từ 1 file có đuôi .css bên ngoài, cần có bước nhúng file .css vào sử dụng thẻ <link />, nhúng trong thẻ <head> */
+		/* Tạo 1 file style.css ngang hàng với file hiện tại */
+
+		/* 5  - Các thuộc tính CSS cơ bản */
+		/* Background: màu nền; */
+		#div-bg {
+			/* background-color: blue; */
+			/* copy 1 ảnh bất kỳ vào ngang hàng với file .html hiện tại */
+			/* background-image: url('image.jpg'); */
+			/* background-repeat: no-repeat; */
+			/* background-position: center; */
+			/* CSS có cú pháp viết gộp, nên ưu tiên sử dụng cú pháp viết gộp để CSS cho ngắn gọn */
+			background: blue url('image.jpg') no-repeat center;
+			/* Cách sử dụng công cụ Inspect HTML để code CSS nhanh và trực quan */
+			/* Chuột phải trên trình duyêt, chọn Inspect/Kiểm tra:  thay đổi css trực tiếp trên Inspect, khi ưng thì copy vào trong code css; */
+			background: #dede39 url(image.jpg) no-repeat center;
+			}
+			/* - Font chữ */
+			#span-font {
+				/* Cách xác định font-family: dựa vào các font đang có trên máy tính của bạn: C:\Windows\Fonts; */
+			    font-family: Arial;
+			    font-style: italic;
+			    font-weight: bold;
+			    font-size: 40px;
+			}
+			/* - Text */
+			#p-text {
+			    color: #20cb15;
+			    text-align: center;
+			    text-decoration: underline;
+			    text-transform: uppercase;
+			    text-shadow: 3px 3px 8px red;
+			    line-height: 30px;
+			}
+			/* - Border: viền; */
+			#p-borer {
+			    /* border-style: solid;
+			    border-color: red;
+			    border-width: 5px; */
+			    border-radius: 10px;
+			    /* Cú pháp viết gộp: ; */
+			    border: 5px solid red;
+			}
+			/* - Margin: khoảng cách giữa các selector liền kề nhau; */
+			#p-margin {
+			    margin-bottom: 29px;
+			    margin-left: 20px;
+			    background: red;
+			    margin-right: 66px;
+			    margin-top: 58px;
+			}
+			/* - Padding: khoảng cách từ viền của selector đến nội dung bên trong của nó; */
+			#p-padding {
+			    border: 1px solid red;
+			    padding-top: 20px;
+			    padding-left: 30px;
+			    padding-right: 30px;
+			    padding-bottom: 50px;
+			}
+	</style>
+	<p id="p-padding">
+		Demo CSS padding
+	</p>
+
+	<p id="p-margin">
+		Demo CSS margin
+	</p>
+	<p id="p-borer">
+		Demo CSS border
+	</p>
+
+	<p id="p-text">
+		Demo CSS Text <br />
+		dòng thứ 2
+	</p>
+
+	<span id="span-font">
+		Demo CSS font
+	</span>
+
+	<div id="div-bg">
+		Div với css background
+	</div>
+
+	<h1 id="h1-css">
+		Đổi màu từ 1 file .css bên ngoài
+	</h1>
+
+
+	<p style="color: red">
+		Thẻ p đc style inline
+	</p>
+
+	<a href="#" id="a-before-after">
+		Thẻ a ban đầu
+	</a>
+
+	<h3 id="h3-hover">
+		Rê chuột qua để đổi màu text
+	</h3>
+
+	<ul>
+		<li>Thẻ li thứ nhất</li>
+		<li>Thẻ li thứ 2</li>
+		<li>Thẻ li thứ 3</li>
+		<li>Thẻ li cuối cùng</li>
+	</ul>
+
+
+	<form action="" method="post">
+		<input type="text" value="" name="" placeholder="Nhập tên">
+		<br />
+		<input type="number" value="" />
+	</form>
+
+	<div class="div-parent">
+		<i>Thẻ i1</i>
+		<i>Thẻ i2</i>
+		<div>
+			<i>Thẻ i3</i>
+		</div>
+	</div>
+
+	<div id="div-id">
+		<p>Thẻ p bên trong div có id=div-id</p>
+		<p>Thẻ p2 bên trong div có id=div-id</p>
+	</div>
+	<p>Thẻ p bên ngoài div</p>
+
+
+
+	<span class="a-class class1 class2">
+		Thẻ span áp dụng class
+	</span>
+
+	<a href="#" id="a-id">
+		Thẻ a với thuộc tính id
+	</a>
+	<a href="#" class="a-class">
+		Thẻ a với thuộc tính class
+	</a>
+
+
+	<p>Thẻ p1</p>
+	<p>Thẻ p2</p>
+
+	<h1>Thẻ h1 có màu đỏ</h1>
+	</body>
+</html>
