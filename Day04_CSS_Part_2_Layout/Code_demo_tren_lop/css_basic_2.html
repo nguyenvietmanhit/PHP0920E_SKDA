@@ -1,0 +1,151 @@
+<!-- css_basic_2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Demo CSS cơ bản phần 2</title>
+</head>
+<body>
+	<style type="text/css">
+		/* 1 - Width - Height: set kích thước cố định cho selector; */
+		#width-height {
+		    background: red;
+		    width: 170px;
+		    height: 200px;
+		}
+		/* Min max set kích thước cho selector theo miền phạm vi, chứ ko cố định như set width - height */
+		#min-max {
+		    background: yellow;
+		    min-width: 200px;
+		    max-width: 400px;
+		    /* width: 1500px; */
+		    min-height: 100px;
+		    max-height: 400px;
+		}
+
+		/* 2 - Position: nếu muốn di chuyển selector mà ko làm ảnh hướng tới các vị trí khác xung quanh nó -> sử dụng css position; */
+		/* 1 selector mà có css position, tưởng tưởng selector đó đã nổi lên trên nền web, nhìn thấy selector này trước các selector bình thường */
+		/* - position: fixed: ví trị luôn cố định cho dù có kéo thanh cuộn đi đâu đi chăng nữa; */
+		#fixed {
+		    background: blue;
+		    position: fixed;
+		    top: 30px;
+		    left: 30px;
+		    /* right: 50px; */
+		    /* bottom: 42px; */
+		}
+		body {
+			min-height: 2000px;
+		}
+
+		/* + position: relative, selector di chuyển độc lập, ko cần dựa vào các selector khác, relative vẫn giữ đc width của selector */
+		#relative {
+		    background: pink;
+		    position: relative;
+		    top: 15px;
+		    left: 77px;
+		    /* right: 105px; */
+		    /* bottom: 20px; */
+		}
+		/* position: absolute, vị trị tuyệt đối của selector, mặc định sẽ căn theo 4 cạnh của trình duyệt nếu như ko có selector cha nào mà có position = relative */
+		#absolute {
+		    background: red;
+		    position: absolute;
+		    bottom: 0;
+		    right: 0;
+		}
+		/* + Thực tế absolute luôn luôn đi kèm với 1 selector cha nào đó đang có position = relative, và khi đó absolute lấy relative để căn theo */
+		#children {
+		    background: green;
+		    position: absolute;
+		    bottom: -24px;
+		}
+		#parent {
+		    background: #000;
+		    position: relative;
+		}
+
+		/* 3 - @media: dùng trong thiết kế web responsive (dựa theo kích thước màn hình); */
+		/* 4 - @font-face: nhúng các font bên ngoài vào trang web; */
+		/* 5 -  z-index: set thứ tự ưu tiên hiển thị cho selector, chỉ hoạt động với selector đang có css position; */
+		/* Mặc định z-index nếu ko đc set thì sẽ = 0 */
+		#red {
+			background: red;
+			width: 300px;
+			height: 300px;
+		}
+		#blue {
+			background: blue;
+			width: 200px;
+			height: 200px;
+			z-index: 1;
+		}
+		#yellow {
+			background: yellow;
+			width: 100px;
+			height: 100px;
+		}
+		/* css để cả 3 selector trên đều chung 1 position absolute */
+		#red, #blue, #yellow {
+			position: absolute;
+			bottom: 0;
+		}
+		/* 6 - Overflow: xác định các hiển thị phần nội dung thừa của selector khi nội dung đó vượt quá kích thước của nó; */
+		/* Có giá trị scroll-x -> cuộn ngang */
+		/* Có giá trị scroll-y -> cuộn dọc */
+		#overflow {
+			width: 50px;
+			background: red;
+			overflow: hidden;
+		}
+		/* 7 - Opacity: độ mờ của selector; */
+		#opacity {
+		    background: red;
+		    opacity: 0.5;
+		}
+		/* 8 - Transition: xác định thời gian và hiệu ứng chuyển đổi trạng thái của selector; */
+		#transition:hover {
+			background: pink;
+		}
+	</style>
+	<p id="transition">
+		Hover để đổi màu nền
+	</p>
+	<h1 id="opacity">Thẻ h1 với css opacity</h1>
+
+	<div id="overflow">
+		Overflow aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	</div>
+
+	<!-- <div id="red">Red</div>
+	<div id="blue">Blue</div>
+	<div id="yellow">Yellow</div> -->
+
+
+	<!-- <div id="parent">
+		<div id="children">Thẻ div children</div>
+	</div>
+
+	<div id="absolute">
+		Thẻ div với position absolute
+	</div> -->
+
+
+	<!-- <div id="relative">
+		Thẻ div với css position relative
+	</div> -->
+
+
+	<!-- <div id="fixed">
+		Div với css position fixed
+	</div> -->
+	<div id="min-max">
+		Div với css min max width height
+	</div>
+
+
+	<div id="width-height">
+		Thẻ div với css width - height
+	</div>
+</body>
+</html>
