@@ -1,0 +1,77 @@
+<!-- chua_bt_5_ngay_4.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Chữa bài tập 5 ngày 4</title>
+	
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<!-- Nguyên tắc khi dựng trang HTML bất kỳ:
+	- Cần phân tích trang HTML đó để lấy ra bố cục của trang, sau đó chia ra làm các khối theo chức năng
+	- Nên khai báo class thay vì id cho các khối
+	- Nếu phát hiện khối nào mà có cấu trúc hàng và cột -> cần dựng cấu trúc layout luôn để sử dụng css flex, chỉ chia layout nếu 1 hàng mà có từ 2 cột trở lên
+	- Bao toàn bộ nội dụng trang web bởi 1 khối ngoài cùng
+	- Xây dựng HTML từ tổng quan, sau đó mới đi vào chi tiết nội dung từng khối
+	+ Sau khi dựng xong HTML -> CSS
+	Tạo thư mục css ngang hàng với file hiện tại,
+	bên trong thư mục css, tạo 1 file style.css
+	chua_bt_5_ngay_4.html
+	css
+	   /style.css
+	 -->
+	 <div class="container">
+	 	<!-- LOGO (chỉ có 1 hàng/1 cột nên ko chia layout)-->
+	 	<div class="logo">
+	 		<h1 class="logo-heading">
+	 			logo
+	 		</h1>
+	 	</div>
+	 	<!-- END LOGO -->
+
+	 	<!-- MENU (chỉ có 1 hàng/1 cột nên ko chia layout)-->
+	 	<div class="menu">
+	 		<!-- Menu thường sử dụng ul li để xây dựng -->
+	 		<ul>
+	 			<li><a href="#">Home</a></li>
+	 			<li><a href="#">Products</a></li>
+	 			<li><a href="#">Services</a></li>
+	 			<li><a href="#">About</a></li>
+	 			<li><a href="#">Contact</a></li>
+	 		</ul>
+	 	</div>
+	 	<!-- END MENU -->
+
+	 	<!-- FEATURE (chỉ có 1 hàng/1 cột nên ko chia layout) -->
+	 	<div class="feature">
+	 		Feature
+	 	</div>
+	 	<!-- END FEATURE -->
+
+	 	<!-- MAIN (1 hàng/3 cột nên dựng luôn cấu trúc layout)-->
+	 	<div class="main">
+	 		<!-- Cấu trúc layout sẽ có khối bao ngoài là class=row, bên trong sẽ là số cột tương ứng với số thẻ div -->
+	 		<div class="row">
+	 			<div class="col">
+	 				Column One
+	 			</div>
+	 			<div class="col">
+	 				Column Two
+	 			</div>
+	 			<div class="col">
+	 				Column Three
+	 			</div>
+	 		</div>
+	 	</div>
+	 	<!-- END MAIN -->
+
+	 	<!-- FOOTER (có 1 hàng 1 cột nên ko chia layout)-->
+	 	<div class="footer">
+	 		<!-- Để viết ký tự copyright, search với từ khóa: html character special để lấy mã HTML của ký tự đó -->
+	 		&copy; Copyright 2011
+	 	</div>
+	 	<!-- END FOOTER -->
+	 </div>
+</body>
+</html>

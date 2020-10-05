@@ -1,0 +1,64 @@
+<!--
+CÁC BƯỚC CẮT HTML CSS TỪ FILE .PSD:
++ Là bước chuyển đổi các thông tin từ file .psd thành giao diện html
++ Bắt buộc phải tuân theo thiết kế của file .psd về ảnh, font, màu sắc ...
++ Thường cắt đạt 7 - 80% giống file thiết kế là ok
+1 - Tạo cấu trúc thư mục như sau:
+psd_demo/
+	    /css/ : chứa các file .css
+	        /style.css: file css chính
+	    /fonts: chứa các font lấy đc từ file .psd
+	    /images: chứa các ảnh cắt đc từ file .psd
+	    /js: chứa các file .js (học sau)
+	    /index.html: file HTML chính
+2 - Cắt ảnh từ file  .psd -> lưu vào thư mục images đã tạo
++ Chỉ cắt ảnh nào mà ko thể dùng HTML CSS để tạo ra đc -> linh hoạt
++ Dùng Crop của PSD để cắt ảnh, có thể dùng phím M sau khi crop ảnh để bỏ đi chức năng Crop
++ Ctrl + Alt + Z để undo
++ Copy ảnh mẫu đã cắt trong thư mục
+Draft/psd_demo/images
+3 - Xác định font của file .psd, cần search google để tải các font mà máy bạn chưa có
++ Dùng công cụ Text (T) để lấy font của text bất kỳ
++ Cần search font: Pacifico , tải về lưu vào thư mục fonts
+ + Copy file Draft/psd_demo/fonts/Pacifico.ttf
+ vào thư mục fonts hiện tại
+ 4 - CODE HTML -> CSS, trong quá trình dựng HTML cần chia bố cục, thêm class, chia layout (hàng/cột) nếu có
+ + Hướng dẫn nhúng font từ bên ngoài vào hệ thống
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8" />
+ 	<title>BT1 ngày 5</title>
+ </head>
+ <body>
+ 	<style type="text/css">
+ 		/* Nhúng font Pacifico vào*/
+ 		@font-face {
+ 			/* Tự set tên font family */
+ 			font-family: 'Pacifico';
+ 			/* Đường dẫn tới font */
+ 			src: url('fonts/Pacifico.ttf');
+ 		}
+ 		.bloom {
+ 			font-size: 30px;
+ 			font-family: 'Pacifico';
+ 		}
+ 	</style>
+ 	<span class="bloom">
+ 		Bloom
+ 	</span>
+
+ 	<div class="container">
+ 		<!-- HEADER -->
+ 		<div class="header-wrap">
+ 			<div class="header content"></div>
+ 		</div>
+ 		<!-- END HEADER -->
+
+ 		<!-- MAIN -->
+
+ 		<!-- END MAIN -->
+ 	</div>
+ </body>
+ </html>

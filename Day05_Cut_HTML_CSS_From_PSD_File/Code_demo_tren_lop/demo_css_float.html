@@ -1,0 +1,45 @@
+<!-- demo_css_float.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Demo CSS Float</title>
+</head>
+<body>
+<style type="text/css">
+	.col1 {background: red;}
+	.col2 {background: blue;}
+	.col3 {background: pink;}
+	/* Sử dụng cơ chế float để dựng layout:
+	1 selector bị float: left, bị đẩy về phía bên
+	trái của nó, hút phần tử liền kề ngay phía sau lên nằm chung hàng với nó, selector bị float cũng mất hết width -> sau khi float cần set lại width cho phần tử đó
+	*/
+	.col1, .col2 {
+		float:  left;
+	}
+
+	.row {
+		border: 1px solid #000;
+	}
+
+	.col3 {
+		/* Khi css khoảng cách của phần tử ko bị float so với phần tử bị float -> vỡ giao diện ; */
+		margin-top: 10px;
+	}
+	/* Có 2 cách fix vỡ giao diện với float:
+	+ Can thiệp vào HTML
+	; */
+	.clearfix {
+    	clear: both;
+	}
+	/* + Ko cần can thiệp HTML: dùng css vào khối bao lấy các phần tử đang bị float:
+	overflow: auto; */
+</style>
+<div class="row">
+	<div class="col1 col">Cột 1</div>
+	<div class="col2 col">Cột 2</div>
+	<div class="col3 col">Cột 3</div>
+</div>
+<p style="background: red">H1</p>
+</body>
+</html>

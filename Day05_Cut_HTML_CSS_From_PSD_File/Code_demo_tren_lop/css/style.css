@@ -1,0 +1,61 @@
+/* Quy tắc CSS: đi từ đầu xuống cuối trang HTML; */
+/* Vẫn dùng Inspect HTML để CSS cho trực quan */
+.container {
+    /* background: red; */
+    max-width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}
+.logo, .menu, .feature, .footer {
+	background: #EFEFEF;
+}
+
+.logo-heading {
+    margin: 0;
+}
+
+.logo {
+	/* padding: trên-dưới trái-phải */
+	padding: 2px 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.menu {
+    padding: 5px 0;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+li {
+	/* Cơ chế flex nên dùng khi chia layout, 
+	còn với menu thì ko cần thiết */
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.feature {
+    margin-bottom: 20px;
+    height: 100px;
+}
+
+.main {
+	margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    /* fix trường hợp các cột bên trong đang 
+    margin trái phải bao nhiêu thì ở khối bao
+    sẽ margin trái phải âm tương ứng */
+    margin: 0 -10px;
+}
+
+.col {
+	width: 33.33%;
+	height: 100px;
+	background: #EFEFEF;
+	margin: 0 10px;
+}
