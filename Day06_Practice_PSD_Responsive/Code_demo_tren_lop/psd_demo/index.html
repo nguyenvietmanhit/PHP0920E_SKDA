@@ -25,3 +25,249 @@ Draft/psd_demo/images
  4 - CODE HTML -> CSS, trong quá trình dựng HTML cần chia bố cục, thêm class, chia layout (hàng/cột) nếu có
  + Hướng dẫn nhúng font từ bên ngoài vào hệ thống
  -->
+
+
+<!-- psd_demo/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Chữa bài tập 1 ngày 5</title>
+	<!-- Nhúng file css từ bên ngoài -->
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<!-- Các bước dựng 1 trang web:
+	 - Phân tích bố cục trang -> header, main, footer ....
+	 - Dựng HTML, thêm class cho các thẻ và dựng sẵn cấu trúc layout (hàng/cột) nếu có
+	 - Code CSS (Inspect HTML, CSS từ trên xuống của trang HTML)
+	 -->
+	 <div class="main-container">
+	 	<!-- HEAEDER -->
+	 	<div class="header">
+	 		<div class="container">
+	 			<!-- Do có cấu trúc layout: 1 hàng 2 cột -> dựng cấu trúc row/col -->
+	 			<div class="row">
+	 				<div class="logo">
+	 					Bloom
+	 				</div>
+	 				<div class="menu">
+	 					<ul>
+	 						<li><a href="#">Home</a></li>
+	 						<li><a href="#">About Us</a></li>
+	 						<li><a href="#">Services</a></li>
+	 						<li><a href="#">Portfolio</a></li>
+	 						<li><a href="#">Contact Us</a></li>
+	 					</ul>
+	 				</div>
+	 			</div>
+	 		</div>
+	 	</div>
+	 	<!-- END HEADER -->
+
+	 	<!-- MAIN -->
+	 	<div class="main">
+	 		<!-- MAIN TOP -->
+	 		<div class="main-top">
+	 			<div class="container">
+	 				<div class="row">
+	 					<div class="info">
+	 						<h2 class="info-title">
+	 							Lorem ipsum dolor sit amet
+	 						</h2>
+	 						<div class="des">
+	 							<p>Vestibulum pulvinar tincidunt placerat. Nulla porta porttitor sem, a ultrices magna feugiat quis. Nam ac diam ac libero posuere lacinia eget et libero. </p>
+	 							<p>Cras pretium odio eget felis consequat, ut adipiscing enim suscipit. Suspendisse hendrerit sapien blandit nisi sagittis dictum. </p>
+	 						</div>
+	 						<div class="learn-more">
+	 							<a href="#" class="learn-more-link">
+	 								Learn More
+	 							</a>
+	 						</div>
+	 					</div>
+	 					<div class="avatar">
+	 						<img src="images/image.jpg" class="avatar-img" />
+	 					</div>
+	 				</div>
+	 			</div>
+	 		</div>
+	 		<!-- END MAIN TOP -->
+
+	 		<!-- MAIN BOTTOM -->
+	 		<div class="main-bottom">
+	 			<div class="container">
+	 				<h2 class="heading">
+	 					This is a Heading
+	 				</h2>
+	 				<div class="row">
+	 					<div class="item">
+	 						<div class="black"></div>
+	 						<h3 class="item-title">
+	 							Aliquam et iaculis sapien
+	 						</h3>
+	 						<p class="des">
+	 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi nisl, bibendum et feugiat eu, vehicula ac nulla.
+	 						</p>
+	 						<div class="learn-more">
+	 							<a href="#" class="learn-more-link">
+	 								Learn More
+	 							</a>
+	 						</div>
+	 					</div>
+	 					<div class="item">
+	 						<div class="black"></div>
+	 						<h3 class="item-title">
+	 							Aliquam et iaculis sapien
+	 						</h3>
+	 						<p class="des">
+	 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi nisl, bibendum et feugiat eu, vehicula ac nulla.
+	 						</p>
+	 						<div class="learn-more">
+	 							<a href="#" class="learn-more-link">
+	 								Learn More
+	 							</a>
+	 						</div>
+	 					</div>
+	 					<div class="item">
+	 						<div class="black"></div>
+	 						<h3 class="item-title">
+	 							Aliquam et iaculis sapien
+	 						</h3>
+	 						<p class="des">
+	 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi nisl, bibendum et feugiat eu, vehicula ac nulla.
+	 						</p>
+	 						<div class="learn-more">
+	 							<a href="#" class="learn-more-link">
+	 								Learn More
+	 							</a>
+	 						</div>
+	 					</div>
+	 				</div>
+	 			</div>
+	 		</div>
+	 		<!-- END MAIN BOTTOM -->
+	 	</div>
+	 	<!-- END MAIN -->
+
+	 	<!-- FOOTER -->
+	 	<div class="footer">
+	 		<!-- FOOTER TOP -->
+	 		<div class="footer-top">
+	 			<div class="container">
+	 				<div class="row">
+	 					<div class="lastest">
+	 						<strong>
+	 							Lastest Posts
+	 						</strong>
+	 						<div class="posts">
+	 							<div class="post-item">
+	 								<div class="row">
+	 									<div class="datetime">
+	 										<span class="month">	JULY
+	 										</span>
+	 										<span class="date">
+	 											27
+	 										</span>
+	 									</div>
+	 									<div class="post-content">
+	 										<h5 class="post-title">
+	 											Title
+	 										</h5>
+	 										<p class="post-des">
+	 											Des
+	 										</p>
+	 									</div>
+	 								</div>
+	 							</div>
+	 							<div class="post-item">
+	 								<div class="row">
+	 									<div class="datetime">
+	 										<span class="month">	JULY
+	 										</span>
+	 										<span class="date">
+	 											27
+	 										</span>
+	 									</div>
+	 									<div class="post-content">
+	 										<h5 class="post-title">
+	 											Title
+	 										</h5>
+	 										<p class="post-des">
+	 											Des
+	 										</p>
+	 									</div>
+	 								</div>
+	 							</div>
+	 							<div class="post-item">
+	 								<div class="row">
+	 									<div class="datetime">
+	 										<span class="month">	JULY
+	 										</span>
+	 										<span class="date">
+	 											27
+	 										</span>
+	 									</div>
+	 									<div class="post-content">
+	 										<h5 class="post-title">
+	 											Title
+	 										</h5>
+	 										<p class="post-des">
+	 											Des
+	 										</p>
+	 									</div>
+	 								</div>
+	 							</div>
+	 						</div>
+	 					</div>
+	 					<div class="about">
+	 						<strong>About</strong>
+	 						<div class="about-des">
+	 							<p>About des 1</p>
+	 							<p>About des 2</p>
+	 						</div>
+	 					</div>
+	 					<div class="social">
+	 						<strong>Stay connected</strong>
+
+	 						<div class="social-item">
+	 							<img src="images/icon-fb.jpg" class="social-icon" />
+	 							<span class="social-name">
+	 								Facebook
+	 							</span>
+	 						</div>
+	 						<div class="social-item">
+	 							<img src="images/icon-twiter.jpg" class="social-icon" />
+	 							<span class="social-name">
+	 								Twiter
+	 							</span>
+	 						</div>
+	 						<div class="social-item">
+	 							<img src="images/icon-orange.jpg" class="social-icon" />
+	 							<span class="social-name">
+	 								RSS
+	 							</span>
+	 						</div>
+	 						<div class="social-item">
+	 							<img src="images/icon-gg.jpg" class="social-icon" />
+	 							<span class="social-name">
+	 								Google+
+	 							</span>
+	 						</div>
+	 					</div>
+	 				</div>
+	 			</div>
+	 		</div>
+	 		<!-- END FOTTER TOP -->
+
+	 		<!-- FOOTER BOTTOM -->
+	 		<div class="footer-bottom">
+	 			<div class="container">
+	 				Copyright (c) 2013. All rights reserved Bloom Web Design
+	 			</div>
+	 		</div>
+	 		<!-- END FOOTER BOTTOM -->
+	 	</div>
+	 	<!-- END FOOTER -->
+	 </div>
+</body>
+</html>

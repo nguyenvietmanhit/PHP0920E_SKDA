@@ -1,0 +1,34 @@
+/* css/style.css */
+body {
+	margin:  0;
+}
+
+.header {
+    background: #2F2F2F;
+    padding: 5px 0;
+}
+
+.container {
+    max-width: 70%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+}
+
+/* Nhúng font để style cho Bloom */
+@font-face {
+	font-family: 'Pacifico';
+	/* Do file Pacifico.ttf đang nằm dưới 1 cấp
+	 do với thư mục css nên từ file style.css cần
+	 phải phải lên 1 cấp thì mới vào 
+	 dc thư mục fonts */
+	src: url('../fonts/Pacifico.ttf');
+}
+
+.logo {
+    font-family: Pacifico;
+    font-size: 40px;
+    color: #fff;
+}
