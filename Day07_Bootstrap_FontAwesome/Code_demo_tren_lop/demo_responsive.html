@@ -1,0 +1,128 @@
+<!-- demo_responsive.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Khai báo thẻ meta sau, để trình duyệt hiểu được các thiết bị, nếu ko có thẻ meta này thì khi truy cập web bằng mobile/ipad trình duyệt chỉ zoom nhỏ lại hiển thị từ PC -->
+	<!-- Để 1 website responsive bắt buộc phải khai báo thẻ meta này -->
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+	<meta charset="utf8" />
+	<title>Thiết kế web responsive</title>
+</head>
+<body>
+<!--
+1 - Khái niệm
++ Web đc gọi là responsive khi hiển thị tương thích với tất cả các thiết bị (PC/Laptop, Ipad/Tablet, Mobile)
++ Hiện nay các website đều cần responsive
++ Về mặt code, 1 website đc gọi là repsonsive khi web đó ko xuất hiện thanh cuộn ngang
+ -->
+ <style type="text/css">
+ 	#div-test {
+ 		background: red;
+ 		width: 1200px;
+ 	}
+ 	/* 2 - Code responsive dựa vào kích thước thiết bị, kết hợp với 1 thuộc tính CSS @media*/
+ 	/* + 1 số chuẩn về width của 3 thiết bị chính: PC/Latop, Ipad/Tablet; Mobile:
+	Với PC/Laptop: min-width: 1024px;
+	Với Ipad/Tablet: min-width: 768px, max-width: 1023px;
+	Với Mobile: max-width: 767px;
+ 	 */
+ 	 /* + Demo CSS trên các thiết bị PC, Ipad, Mobile để đổi màu thẻ h1 */
+ 	 /* + Responsive theo thứ tự sau: PC -> Ipad -> Mobile; */
+ 	 /* CSS cho PC */
+ 	 @media(min-width: 1024px) {
+ 	 	#h1-responsive {
+ 	 		color: red;
+ 	 	}
+ 	 }
+ 	 /* CSS cho Ipad */
+ 	 @media(min-width: 768px) and (max-width: 1023px) {
+ 	 	#h1-responsive {
+ 	 		color: blue;
+ 	 	}
+ 	 }
+ 	 /* CSS cho Mobile */
+ 	 @media(max-width: 767px) {
+ 	 	#h1-responsive {
+ 	 		color: yellow;
+ 	 	}
+ 	 }
+
+
+
+ 	 /* Demo responsive layout hàng và cột:
+		Trên PC 1 hàng 4 cột bằng nhau
+		Trên Ipad 2 hàng, mỗi hàng 2 cột bằng nhau
+		Trên Mobile 4 hàng, mỗi hàng 1 cột
+ 	  */
+ 	  .col1 {
+ 	  	background: blue;
+ 	  }
+ 	  .col2 {
+ 	  	background: red;
+ 	  }
+ 	  .col3 {
+ 	  	background: purple;
+ 	  }
+ 	  .col4 {
+ 	  	background: yellow;
+ 	  }
+
+ 	  .row {
+    	display: flex;
+	  }
+
+	  .col {
+	  	width: 25%;
+	  }
+	  /* CSS ở trên tương đương với trên PC rồi */
+	  /* CSS trên Ipad */
+	  @media (min-width: 768px) and (max-width: 1023px) {
+	  	/* Để thay đổi lại cơ chế mặc định của flex đó là luôn giữ các cột bên trong nó trên cùng 1 hàng cho dù kích thước là bao nhiêu đi chăng nữa, thì cần sử dụng css sau:; */
+	  	/* Sau khi có css này, thì 1 row thì có width = 100% */
+	  	.row {
+	  		flex-wrap: wrap;
+	  	}
+	  	.col {
+	  		width: 50%;
+	  	}
+	  }
+
+	  /* CSS trên Mobile */
+	  @media (max-width: 767px) {
+	  	.row {
+	  		flex-wrap: wrap;
+	  	}
+	  	.col {
+	  		width: 100%;
+	  	}
+	  }
+
+/* 3  - File Reset CSS: css lại các thẻ theo 1 chuẩn nhất định nào đó
+*/
+/* Ko nên dùng css sau để reset css  */
+/* * {
+	margin:  0; padding:  0;
+} 
++ Có thể tham khảo các file reset css có sẵn trên mạng: normalize.css;
+*/
+
+ </style>
+ <div class="row">
+ 	<div class="col1 col">Nội dung 1</div>
+ 	<div class="col2 col">Nội dung 2</div>
+ 	<div class="col3 col">Nội dung 3</div>
+ 	<div class="col4 col">Nội dung 4</div>
+ </div>
+
+
+ <h1 id="h1-responsive">
+ 	Thẻ h1 sẽ thay đổi màu trên từng thiết bị
+ </h1>
+
+
+ <div id="div-test">
+ 	Nội dung thẻ div Nội dung thẻ div Nội dung thẻ div Nội dung thẻ div Nội dung thẻ div Nội dung thẻ div Nội dung thẻ div Nội dung thẻ div Nội dung thẻ div 
+ </div>
+</body>
+</html>
