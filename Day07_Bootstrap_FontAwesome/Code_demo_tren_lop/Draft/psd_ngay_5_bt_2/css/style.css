@@ -1,0 +1,113 @@
+/* css/style.css */
+/* Dùng công cụ inspect HTML để code */
+/* Nhúng các font vào hệ thống để sử dụng */
+/* Nhúng 2 font Qlassik và QlassikBold dựa theo
+4 file font đã tải về */
+@font-face {
+	font-family: 'QlassikBold_TB';
+	src: url('../fonts/QlassikBold_TB.ttf');
+}
+@font-face {
+	font-family: 'Qlassik_TB';
+	src: url('../fonts/Qlassik_TB.ttf');
+}
+body {
+	margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.header {
+    background: #D8E8E9;
+    padding: 20px 0;
+    font-family: Qlassik_TB;
+    font-size: 20px;
+    color: #3A6669;
+}
+.header-content {
+    width: 80%;
+    margin: auto;
+}
+
+/* set relative cho khối main, để khối main-content 
+khi áp dụng css postion absolute sẽ luôn di chuyển
+dựa vào khối main này*/
+.main {
+    position: relative;
+}
+
+.main-top {
+    height: 100px;
+    background: #554033;
+}
+
+.main-bottom {
+    height: 500px;
+    background: #B1A38D;
+}
+
+/* để căn giữa 1 phần tử đang bị position so với thành
+phần cha có position relative, cần sử dụng left:0,
+right: 0; margin: auto*/
+.main-content {
+    position: absolute;
+    background: #FEFAE8;
+    top: 25px;
+    width: 80%;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.menu li {
+    background: #88AC3A;
+    width: 20%;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.menu li a {
+	color:  #fff;
+	text-decoration: none;
+    font-family: Arial Regular;
+}
+/* cú pháp selector theo trạng thái:đầu tiên, cuối cùng
+bất kỳ, trước, sau, hover; */
+.menu li:first-child {
+	background: #FEFAE8;
+}
+/* chỉ thẻ a nào nằm trong li đầu tiên mới bị ăn css */
+.menu li:first-child a {
+	color: #000;
+}
+
+.menu {
+    margin-bottom: 15px;
+}
+
+.banner {
+    padding: 0 15px;
+}
+
+.banner-img {
+    width: 100%;
+}
+
+.quote {
+    display: flex;
+    margin: 15px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}

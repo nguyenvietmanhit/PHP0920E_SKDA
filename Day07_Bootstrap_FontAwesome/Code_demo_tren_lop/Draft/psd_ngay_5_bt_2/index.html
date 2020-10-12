@@ -1,0 +1,128 @@
+<!-- 
++ B1: Tạo cấu trúc thư mục
+psd_ngay_5_bt_2/
+			  /index.html
+			  /css/style.css
+			  /js
+			  /images
+			  /fonts
++ B2: Cắt ảnh từ file .psd, lưu trong thư mục images vừa tạo, sử dụng tool Crop (C) để cắt ảnh
++ B3: Xác định các font trong file thiết kế, download các
+font chưa có. Lưu ý cần phải tuần theo file thiết kế: các font, các hình ảnh, màu sắc phải giống, còn khoảng cách tương đối cũng đc, sử dụng công cụ Text(T) của Photoshop
+CÁc font đang dùng trong file: QlassikBold (chưa có),
+Arial Regular - Bold(có rồi), Georgia Italic (có rồi),
+Cần tải font chưa có bằng cách search google
++ B4: Code HTML:
+- Xác định bố cục của trang trước: header, main-content, footer, .... dựa vào file thiết kế
+- Code khung HTML trước, tạo ra các khối (div) dựa vào bố cục mà vừa phân tích đc
+- Code từ trên xuống dưới, xây dựng HTML chi tiết cho từng
+khối, trong quá trình xây dựng nếu thấy có cấu trúc hàng/cột -> dựng sẵn khối row-col tương ứng
+- Sau khi xong HTML -> CSS dựa vào công cụ Inspect HTML của trình duyệt để CSS cho trực quan
+			  -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Chữa bài tập 2 ngày 5</title>
+		<!-- Nhúng file css/style.css vào -->
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<!-- HEADER -->
+			<div class="header">
+				<div class="header-content">
+					Design Portfolio of John Doe
+				</div>
+			</div>
+			<!-- END HEADER -->
+			<!-- MAIN -->
+			<div class="main">
+				<!-- MAIN TOP -->
+				<div class="main-top"></div>
+				<!-- END MAIN TOP -->
+
+				<!-- MAIN BOTTOM -->
+				<div class="main-bottom"></div>
+				<!-- END MAIN BOTTOM -->
+
+				<!-- MAIN CONTENT -->
+				<div class="main-content">
+					<div class="menu">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Porfolio</a></li>
+							<li><a href="#">Themes</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</div>
+					<div class="banner">
+						<img src="images/image.jpg" class="banner-img" />
+					</div>
+					<div class="quote">
+						<span class="quote-text">
+							Thanks for visiting my portfolio site. Your tagline or welcome message will go here for visitors to see.
+						</span>
+						<a href="#" class="quote-link">
+							Get a quote
+						</a>
+					</div>
+					<div class="content">
+						<!-- Do thấy có cấu trúc hàng/cột nên dựng sẵn row/col luôn -->
+						<div class="row">
+							<div class="content-item">
+								<h2>About Me</h2>
+								<div class="des">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing </p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing </p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing </p>
+								</div>
+							</div>
+							<div class="content-item">
+								<h2>How can i help you?</h2>
+								<div class="des">
+									<p>
+										<span class="des-title">
+											Web Design
+										</span>
+										<span class="des-text">
+											Lorem ipsum dolor sit amet, 
+										</span>
+									</p>
+									<p>
+										<span class="des-title">
+											Web Design
+										</span>
+										<span class="des-text">
+											Lorem ipsum dolor sit amet, 
+										</span>
+									</p>
+									<p>
+										<span class="des-title">
+											Web Design
+										</span>
+										<span class="des-text">
+											Lorem ipsum dolor sit amet, 
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="links">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Porfolio</a></li>
+							<li><a href="#">Themes</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END MAIN CONTENT -->
+			</div>
+			<!-- END MAIN -->
+		</div>
+	</body>
+</html>
