@@ -1,0 +1,32 @@
+<!--
+Cấu trúc thư mục/file sẽ như sau
+css/bootstrap.min.css
+/chua_bt_8_ngay_7.html
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chữa BT8 ngày 5</title>
+	<!-- Nhúng file .css của bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<style type="text/css">
+		/* css đè lại css của bootstrap, để show dropdown lên */
+		.dropdown-menu {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<!-- Truy cập trang bootstrap, tìm component Dropdown -->
+	<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- demo_javascript.hmtl -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo Javacsript cơ bản phần 1</title>
+</head>
+<body>
+<!--
+1 - Khái niệm
++ Javascript là 1 ngôn ngữ lập trình phía Frontend
++ Javascript và Java là 2 ngôn ngữ hoàn toàn khác nhau
++ Javascript khá khó học, tuy nhiên với lập trình web PHP thì cũng ko yêu cầu quá nặng về Javascript
++ Nếu muốn học sâu về Javascript, nên theo hướng lập trình Frontend là học lên các Framework của JS: Node, Angular, React ...
++ Học Javascript với PHP sẽ tiếp cận theo 2 hướng sau:
+- Học cách Javascript tương tác với HTML thông qua các sự kiện
+- Tư duy lập trình
+2 - Khai báo vùng làm việc với JS, có 3 cách khai báo (giống CSS):
++ Inline trong thẻ HTML: thông qua sự kiện của JS
+ -->
+ <a onclick="alert('Hello');">Click để show popup</a>
+ <!--
++ Inline trong file .html,sử dụng cặp thẻ đầy đủ <script> để nhúng
+  -->
+<script type="text/javascript">
+	// code js tại đây
+	console.log('Mở tab Console của công cụ Inspect HTML để thấy dòng text này');
+</script>
+<!--
++ Nhúng từ file bên ngoài: thông qua file .js
+Tạo 1 file script.js ngang hàng với .html hiện tại
+Đế nhúng file .js sử dụng cặp thẻ <script> với thuộc tính src
+-->
+<script type="text/javascript" src="script.js"></script>
+
+<!--
+3 - Chú ý về vị trí nhúng code JS trong file .html
++ Code JS sẽ ko đc đặt 1 cách tùy ý trong file .html
++ Thông thường code JS sẽ đặt sau cùng của 1 trang .html, để chắc
+ăn nhất code JS sẽ đc đặt ngay trước thẻ đóng </body>, lý do vì JS dùng để tương tác với HTML, nên phải chờ HTML hiển thị xong thì JS mới có cái để tương tác
++ Trong Javascript có 1 sự kiện giúp cho đặt code JS ở vị trí nào trong file .html cũng dc, onload
+-->
+</body>
+</html>

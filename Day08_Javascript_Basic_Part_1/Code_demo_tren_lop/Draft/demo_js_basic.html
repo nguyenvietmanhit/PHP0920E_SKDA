@@ -1,0 +1,169 @@
+<!-- demo_js_basic.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8" />
+	<title>Js căn bản phần 1</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//console.log hiển thị message trong tab Console của trình duyệt, dùng để debug - xem thông tin dữ liệu, tab Console là tab dùng để debug code Javascript
+		console.log('Hello, World');
+		// CÁC KHÁI NIỆM CHUNG CỦA LẬP TRÌNH
+		// 1 - Biến
+		// + Biến đổi: giá trị của biến có thể thay đổi bất cứ lúc nào phụ thuộc mục đích của bạn
+		// + Về mặt vật lý, biến là 1 vùng nhớ
+		// + Minh họa: biến như 1 ngăn kéo, khi đặt 3 tờ giấy vào ngăn kéo này, thì tương đương biến có giá trị = 3
+		// + Khai báo biến trong JS: sử dụng từ khóa var, let
+		var name = 'Mạnh';
+		var name1, name2;
+		// + Quy tắc khai báo biến: tên biến ko đc đặt 1 cách tùy tiện, mà sẽ theo quy tắc sau:
+		// - Phải bắt đầu bằng ký tự chữ hoặc dấu _, $
+		// var 5abc, ^abc, -123;
+		// - Tên biến ko dc trùng với các từ khóa của JS
+		// var var, if, else;
+		// - Với Javascript thì tên biến phân biệt hoa thường
+		var name, Name;//là 2 biến hoàn toàn khác nhau
+		// - Nên đặt tên biến có ngữ nghĩa
+		// var a, b, c;
+		// Thực hành: khai báo 3 biến, nối chuỗi
+		var name = 'Mạnh';
+		var age = 30;
+		var address = 'Sơn Đồng - Hoài Đức - Hà Nội';
+		//sử dụng hàm document.write để hiển thị nội dung ra màn hình, sử dụng toán tử + để nối chuỗi trong JS
+		//hàm document.write sẽ ko đc sử dụng trong thực tế
+		document.write('Name: ' + name + "<br />");
+		document.write('Age: ' + age + '<br />');
+		document.write('Address: ' + address);
+		// 2 - Hằng
+		// + Là 1 loại biến, tuy nhiên ko thể thay đổi giá trị của hằng một khi đã khai báo
+		// + Khai báo: sử dụng từ khóa: const
+		// + Tên hằng nên viết hoa
+		const PI = 3.14;
+		const NAME = 'abc';
+		//cố tình gán lại giá trị khác cho hằng sẽ báo lỗi
+		// PI = 1;
+		// 3 - Kiểu dữ liệu trong JS
+		// + Number : kiểu số, bao gồm cả số nguyên và số thập phân
+		var number1 = 30;
+		var number2 = -123;
+		var number3 = 1.23;
+		//sử dụng hàm typeof để kiểm trả kiểu dữ liệu của biến
+		console.log(typeof number3);//number
+		// + String: kiểu chuỗi, sử dụng ký tự ' hoặc " để bao lấy giá trị
+		var string1 = 'String 1';
+		var string2 = "String 2";
+		var string3 = "Hello, 'Mạnh'"; //Hello, 'Mạnh'
+		console.log(typeof string3); //string
+		// + Boolean: kiểu đúng/sai, chỉ có 2 giá trị duy nhất là:true, false và 2 giá trị này phải viết thường hết
+		var bool1 = true;
+		var bool2 = false;
+		// var bool3 = True;//giá trị này sai so với kiểu boolean
+		console.log(typeof bool1); //boolean
+		//3 kiểu dữ liêu: number, string, boolean gọi là 3 kiểu dữ liệu nguyên thủy -> có thể tính toán đc
+		// + Undefined: sinh ra khi khai báo biến mà ko gán giá trị cho nó
+		var und1;
+		console.log(typeof und1); //undefined
+		// + null: có giá trị duy nhất là null
+		var null1 = null;
+		// + array: kiểu mảng, là kiểu dữ liệu có cấu trúc, mảng có thể chứa dc nhiều giá trị bên trong
+		//sẽ ko thao tác với mảng trong nội dung khóa học
+		//kiểu mảng trong JS về bản chất là 1 object
+		var arr = [1, 'abc', true, null, [1, 2, 3]];
+		console.log(typeof arr); //object
+		// + object: kiểu đối tượng, 1 đối tượng sẽ có thuộc tính và phương thức
+		var person = {
+			name: 'Mạnh',
+			age: 30,
+			run: function() {
+				console.log('run');
+			}
+		};
+		console.log(person); //object
+
+		// 4  - Hàm - Function
+		// + Hàm là khối lệnh, để xử lý 1 tác vụ gì đó
+		// + Hàm có tính sử dụng lại
+		// + Hàm có 2 kiểu: hàm định nghĩa sẵn của ngôn ngữ lập trình đó, và hàm tự định nghĩa
+		// HÀm tự định nghĩa: là hàm do bạn tự viết ra
+		//Cú pháp:
+		//+ Quy tắc đặt tên hàm sẽ giống với đặt tên biến
+		function showInfo() {
+			console.log('Code bên trong hàm');
+		}
+		// + Luôn phải có bước gọi hàm để thực thi code bên trong hàm, để gọi hàm -> gọi tên hàm, truyền giá trị cho tham số của hàm nếu có
+		showInfo(); //Code bên trong hàm
+		// + Các biến thể của hàm:
+		// - Hàm có tham số
+		//vd: dựng 1 hàm tính tổng của 2 số, do ko biết 2 số đó cụ thể là gì nên sẽ coi là 2 tham số của hàm
+		function sum(number1, number2) {
+			var sum = number1 + number2;
+			console.log(sum);
+		}
+		//gọi hàm, nếu hàm có tham số thì khi gọi hàm cũng phải truyền giá trị tương ứng cho tham số đó
+		//hàm có tham số là thể hiển cho tính sử dụng lại của hàm
+		sum(1, 2);//3
+		sum(2, 3); //5
+		sum(6, 5); //1
+		// - Hàm có giá trị trả về, sử dụng từ khóa return bên trong hàm
+		//vd: tính tổng 2 số, xây dựng hàm
+		function sumTest(number1, number2) {
+			var sum = number1 + number2;
+			//tính chất từ từ khóa return: kết thúc hàm, làm cho hàm có giá trị nào đó, tất cả các code bên trong hàm mà nằm sau từ khóa return sẽ ko đc thực thi
+			//cố gắng phân tích yêu cầu đề bài để xem nó trả về giá trị nào hay ko, để sử dụng từ khóa return cho phù hợp
+			return sum;
+		}
+		//gọi hàm, nếu hàm có sử dụng return thì sẽ linh hoạt hơn trong việc thao tác với giá trị đó
+		var sum = sumTest(2, 3);
+		console.log(sum);
+		sum = sum + 2;
+		console.log(sum);
+		//viết hàm hiển thị tên của user
+		function showName(name) {
+			// console.log("Tên của bạn: " + name);
+			var result = "Tên của bạn: " + name;
+			return result;
+			//đoạn code bên dưới ko bao giờ dc chạy
+			console.log('abc');
+		}
+		//gọi hàm
+		var result = showName('Mạnh');
+		console.log(result);
+		// 5 - Một số hàm có sẵn của Javascript
+		//+ Hiển thị text ra màn hình trong 1 document mới
+		document.write('Nội dung');
+		// + Hiển thị trong tab console của trình duyệt
+		console.log('test');
+		// + Hiển thị text dưới dạng 1 hộp thoại cảnh báo
+		// alert('show alert');
+		// + Lấy thông tin dưới dạng các input nhập
+		// var name = prompt('Nhập tên của bạn');
+		// console.log('Tên vừa nhập: ' + name);
+		// + Hiển thị text dưới dạng xác nhận, thường sử dụng cho chức năng Xóa
+		// var is_confirm = confirm('Are you delete?');
+		// console.log(is_confirm);
+
+		// 6 - Các sự kiện trong Javascript
+		//demo sự kiện onclick
+
+	</script>
+	<!-- ko gọi sự kiện onlick inline trong thẻ -->
+	<h1 id="h1-click">CLick thẻ h1 để show alert</h1>
+	<script type="text/javascript">
+		//xử lý code js để khi click vào thẻ h1 đang có id=h1-click thì show alert
+		//+ Cần lấy ra đối tượng muốn gọi sự kiện click trước
+		//để đơn giản nhất luôn khai báo id cho các phần tử HTML để thao tác lấy đối tượng cho đơn giản, sử dụng hàm sau:
+		//đây là bước lấy đối tượng HTML muốn tương tác
+		var obj_click = document.getElementById('h1-click');
+		//gắn sự kiện onclick vào đối tượng vừa lấy đc
+		//chú ý bỏ từ on trong onlick khi truyền vào hàm
+		//
+		obj_click.addEventListener('click', function() {
+			//code bên trong hàm callback
+			//hàm này đc gọi là hàm callback - chỉ đc thực thi khi sự kiện trc nó xảy ra
+			alert('Alert');
+		});
+	</script>
+
+</body>
+</html>

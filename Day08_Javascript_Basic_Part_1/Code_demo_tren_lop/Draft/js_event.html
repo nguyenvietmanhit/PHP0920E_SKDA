@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Demo Event trong JAvascript</h1>
+<script type="text/javascript">
+
+
+
+    // window.addEventListener('load', function () {
+    //   var obj_onload = document.getElementById('event-onload');
+    //   console.log(obj_onload);
+    //
+    //   var obj_e = document.getElementById('event-onload');
+    //   obj_e.addEventListener('click', function () {
+    //     alert("dsasda");
+    //   })
+    // });
+
+</script>
+<p id="event-onload">
+    Thẻ p với sự kiện onload
+</p>
+
+<a href="#" id="a-click">Click show alert</a>
+
+<select id="select-change">
+    <option value="1">Value 1</option>
+    <option value="2">Value 2</option>
+    <option value="3">Value 3</option>
+</select>
+
+<input type="checkbox" id="checkbox1" value="1" /> Checkbox 1
+<input type="checkbox" id="checkbox2" value="1" /> Checkbox 1
+
+
+
+<input type="radio" name="gender" id="radio1" value="1" /> Checkbox 1
+<input type="radio" name="gender" id="radio2" value="2" /> Checkbox 1
+
+<a id="p-hover">Hover để đổi màu</a>
+
+<input type="text" id="input-focus" value="" />
+<form id="form-submit" action="" method="post">
+    <input type="text" id="input" value="" />
+    <input type="submit" name="submit" value="Send" />
+</form>
+
+<script type="text/javascript">
+
+  var obj_submit = document.getElementById('form-submit');
+  obj_submit.addEventListener('submit', function () {
+    event.preventDefault();
+    console.log(document.getElementById('input').value)
+  })
+
+  // obj_click.addEventListener('mouseleave', function () {
+  //   this.style = "color: inherit";
+  // })
+  //
+  //
+  //
+  //
+  //
+  // var obj_click = document.getElementById('p-hover');
+  // obj_click.addEventListener('mouseenter', function () {
+  //   this.style = "color: red";
+  // })
+  //
+  // obj_click.addEventListener('mouseleave', function () {
+  //   this.style = "color: inherit";
+  // })
+
+    // var obj_click = document.getElementById('a-click');
+    // obj_click.addEventListener('click', function () {
+    //   alert("dsdsa");
+    // })
+
+    // var obj_change = document.getElementById('select-change');
+    // obj_change.addEventListener('change', function () {
+    //   //lấy value của option seleted
+    //   alert(this.options[this.selectedIndex].value)
+    //   //lấy text của option đã selected
+    //   alert(this.options[this.selectedIndex].text)
+    // });
+    //
+    //
+    // var obj_checkbox1 = document.getElementById('checkbox1');
+    // obj_checkbox1.addEventListener('change', function () {
+    //   alert(this.value)
+    // });
+    //
+    // var radio1 = document.getElementById('radio1');
+    // radio1.addEventListener('change', function () {
+    //   alert(this.value)
+    // });
+</script>
+
+</body>
+</html>
