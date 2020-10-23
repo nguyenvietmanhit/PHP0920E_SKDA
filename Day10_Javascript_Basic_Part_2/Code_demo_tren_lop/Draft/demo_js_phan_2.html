@@ -1,0 +1,304 @@
+<!-- demo_js_phan_2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Demo JS cơ bản phần 2</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		//I -  Toán tử trong Javascript
+		//+ Toán tử thực hiện tính toán giữa các toán 
+		//hạng xung quanh nó
+		// + VD: 3 + 4
+		// 3 ,4 -> 2 toán hạng, ký tự + -> toán tử
+		// 1 - Toán tử số học:
+		var number1 = 5;
+		var number2 = 2;
+		// Phép cộng: +
+		var sum = number1 + number2; 
+		console.log("Sum = " + sum);//Sum = 7
+		// Phép trừ: -
+		var sub = number1 - number2;// 3
+		// Phép nhân: *
+		var multiple = number1 * number2; //10
+		// Phép chia: /
+		var divide = number1 / number2; //2.5
+		// PHép chia lấy dư: %
+		var remain = number1 % number2; //1
+		// Cộng tích lũy: ++, phép tính tăng lên 1 đơn vị
+//		lưu ý toán tử ++ này
+		//có thể đứng trước hoặc sau biến, nên sẽ có
+		//ý nghĩa khác nhau
+		var number1 = 5;
+		var number2 = 2;
+		number1++; //number1 = number1 + 1
+		console.log(number1); //6
+		++number1;
+		console.log(number1); //7
+		//++ phía trước hoặc phía sau thì sự khác biệt 
+		//chính là sự thay đổi giá trị của biến đó trước 
+		//hay sau thời điểm khai báo
+		//VD: tính tổng sau 
+		var a = 5;
+		var sum = a++ - 2 + ++a;//
+		//      =  5  - 2 +   7
+		//10
+		var x = 5;
+		var sum = x * x - --x + 2 + x++ - x * ++x;
+		//      =   25  -   4 + 2 +  4  - 5 *   6 
+		//-3
+		
+		var x = 5;
+		var sum = x++ * ++x + 2 * --x % 2;
+		//      =  5  *   7 + 2  * 6 % 2
+		// 30  35 32 = 35
+		
+		//2 - Toán tử so sánh: dùng để so sánh các toán
+		//hạng xung quanh  nó, kết quả trả về của biểu
+		//thức so sánh này luôn luôn là true/false
+		var number1 = 5;
+		var number2 = 1;
+		// + So sánh bằng: ==, ngoài ra trong JS 
+		//còn có thể gặp so sánh bằng sử dụng 3 dấu bằng:
+		// ===, so sánh cả về giá trị và kiểu dữ liệu
+		var operator1 = (number1 == number2); 
+		console.log(operator1);//false
+		// + So sánh khác: !=
+		var operator2 = (number1 != number2);//true
+		// + So sánh lớn hơn: >
+		var operator3 = (number1 > 0); //true
+		// + So sánh lớn hơn hoặc bằng: >=
+		var operator4 = number2 >= 0; //true
+		// + So sánh nhỏ hơn: <
+		// + So sánh nhỏ hơn hoặc bằng: <=
+		// 3 - Toán tử logic: là toán tử kết hợp các biểu 
+		//thức so sánh, có 3 toán tử logic sau:
+		// + Toán tử AND, sử dụng ký tự &&
+		var number1 = 5;
+		var number2 = 3;
+		var operator1 = 
+		(number1 > number2) && (number1 < 0);//false
+		//(number > 0) && (number2 > 1); //true
+		// + Toán tử OR, sử dụng ||, trả về true 
+		// khi 1 trong 2 biểu thức so sánh là true, false 
+		//khi cả 2 biểu thức cùng là false 
+		var operator2 = (number1 < -1) || (number2 < 0);
+		//false
+		// + Toán tử NOT, sử dụng ký tự !: phủ định của
+		//true là false và ngược lại
+		var operator3 = !(5 > 0); //false
+		
+		// 4 - Toán tử gán: gán giá trị ở bên phải toán tử 
+		//cho biến bên trái toán tử gán
+		var number = 5;
+		// + Phép gán =
+		// + Phép gán theo kiểu cộng tích lũy: +=
+		number += 2; //number = number + 2// 7
+		// + Phép trừ tích lũy: -=
+		number -= 5; //2
+		// + Nhân tích lũy: *=
+		number *= 2; //10
+		// + Chia tích lũy: /=
+		number /= 5; //2
+		// + Chia lấy dư tích lũy: %=
+		number %= 2; // 0
+		//5 - Toán tử điều kiện: ? :, dùng để viết thay 
+		//thế cho câu lệnh if...else
+		var condition = (5 > 0) ? '5 > 0' : '5 <= 0';
+		console.log(condition);// 5 > 0
+		
+		//II - CÂu lệnh điều kiện: if, else, elseif, 
+		//switch case
+		// 1 - Câu lệnh if: kiểm tra logic của biểu thức 
+		//so sánh, nếu biểu thức trả về true thì đi thực 
+		//hiện logic
+		// - Chỉ áp dụng với 1 trường hợp duy nhất
+		var number = 5;
+		if (number > 0) {
+			//logic code nếu biểu thức trả về true
+			console.log("Biến number > 0");
+		}
+		if (number > 0 && 4 < 0) {
+			console.log("true or false?");
+		}
+		// - Câu lệnh if...else: dùng cho 2 trường hợp, sẽ 
+		//xử lý cả 2 điều kiện true/false 
+		var number = -1;
+		if (number > 0) {
+			console.log("number > 0");
+		} else {
+			console.log("number <= 0");
+		} 
+		// - Câu lệnh if...else if ...else: dùng >=3 trường
+		//hợp trở lên
+		var number = -5;
+		if (number >= 8 && number <= 10) {
+			console.log("Giỏi");
+		} else if (number >= 6.5) {
+			console.log('Khá');
+		} else if (number >= 5) {
+			console.log('Trung bình');
+		} else {
+			console.log('Yếu');
+		}
+		
+		//- Biểu thức switch...case: thường dùng để
+		//viết thay thế cho câu lệnh if...elseif...
+		//trong trường hợp có nhiều trường hợp xảy ra,
+		//vì biểu thức switch...case nhìn dễ đọc hơn 
+		//if...elseif
+		//Tuy nhiên chỉ có thể sử dụng biểu thức switch
+		//case này khi biểu thức so sánh là so sánh bằng
+		var day = 2;
+		switch (day) {
+			case 1: console.log('Chủ nhật');
+				break;
+			case 2: console.log('Thứ 2');
+				break;
+			case 4: console.log('Thứ 4');
+				break;
+			default: 
+			console.log('Không phải chủ nhật, t2, t4');
+		}
+		//luôn sử dụng từ khóa break trong biểu thức
+		//switch case sau mỗi case, để khi tìm đc case
+		//đúng thì sẽ thoát luôn
+		
+		// III - Vòng lặp: giúp lặp đi lặp lại 1 hành 
+		//động nào đó
+		//Có 3 vòng lặp cơ bản trong lập trình: for, 
+		//while, do...while 
+		//Luôn luôn phải xác định đc điểm dừng của vòng lặp,
+		// - Vòng lặp for: vòng lặp xác định trước số lần lặp
+		//vd: chạy vòng lặp for để log ra từ 1 đến 10
+		for (var i = 1; i <= 10; i++) {
+			console.log(i);
+		}
+		//12345678910
+		// - Vòng lặp while: ko xác định trc số lần lặp 
+		var j = 1;
+		while(j <= 10) {
+			console.log(j);
+			j++;
+		}
+		//12345678910
+		// - Vòng lặp do...while: giống vòng lặp while 
+		//tuy nhiên code đc chạy ít nhất 1 lần, kể cả
+		//điều kiện trong while có bị false ngay từ đầu
+		var m = 1;
+		do {
+			console.log(m);
+		} 
+		while(m < 0);
+		//1
+		// Với đặc thù của PHP thì ít khi phải thao
+		//tác với 3 vòng lặp trên
+		
+		//5 - Từ khóa break - continue
+		// Đều sử dụng trong vòng lặp, có tác dụng
+		//can thiệp vào quy trình lặp 
+		// - Break: thoát khỏi vòng lặp, ko thực thi
+		//các lần lặp còn lại
+		for(var i = 1; i <= 10; i++) {
+			console.log(i);
+			if (i == 2 || i == 3) {
+				break;
+			}
+		}
+		// - Continue: chỉ bỏ qua lần lặp hiện tại ,
+		//nhảy tới lần lặp kế tiếp
+		for (var j = 1; j <= 10; j++) {
+			console.log(j);
+			if (j >= 5) {
+				continue;
+			}
+			
+		}
+		//12345678910
+		
+	
+		
+		
+		
+	
+	</script>
+	<h1>Form cộng 2 số</h1>
+	<-- khai báo vùng hiển thị lỗi và thành công nếu có -->
+	<h3 style="color: red" id="error"></h3>
+	<h3 style="color: green" id="result"></h3>
+	<form id="form" action="" method="post">
+		Number 1:
+		<input type="text" id="number1" />
+		<br />
+		Number 2:
+		<input type="text" id="number2" />
+		<br />
+		<input type="submit" value="Add" />
+	</form>
+	<script type="text/javascript">
+		//chú ý code JS cần chờ HTML hiển thị xong thì
+		//mới tương tác
+		// + Lấy ra đối tượng form để gắn sự kiện submit
+		//cho nó
+		// LẤy đối tượng theo id, getElementById
+		var obj_form = document.getElementById('form');
+		// Gắn sự kiện submit cho đối tượng form, 
+		obj_form.addEventListener('submit', function() {
+			//alert("dsa");
+			//Quy trình xử lý form đơn giản:
+			// + Khai báo 2 biến chứa thông tin lỗi và thành công
+			var error = '';
+			var result = '';
+			// + LẤy các giá trị của input từ form 
+			// Lấy giá trị của số thứ nhất:
+			var obj_number1 = document.getElementById('number1');
+			var number1 = obj_number1.value;
+			// Lấy giá trị của số thứ 2:
+			var obj_number2 = document.getElementById('number2');
+			var number2 = obj_number2.value;
+			// + Validate form: không đc để trống trường và phải
+			//nhập số
+			if (number1 == '') {
+				error = 'Number 1 ko đc để trống';
+				//xử lý để focus vào đúng input đang lỗi để user đỡ
+				//phải click vào
+				obj_number1.focus();
+			} else if (number2 == '') {
+				error = 'Number 2 ko đc để trống';
+				obj_number2.focus();
+			} 
+			//để kiểm tra giá trị có phải số hay ko, 
+			//sử dụng hàm isNaN - is not a number
+			//trả về true nếu ko phải số, và ngược lại
+			else if (isNaN(number1) || isNaN(number2)) {
+				error = 'Phải nhập số';
+			}
+			// + Xử lý logic cộng hai số chỉ khi ko có lỗi
+			//nào xảy ra
+			if (error == '') {
+				//chú ý: dữ liệu từ input của form mặc định
+				//đang có kiểu string, chứ ko phải number 
+				//nên khi cộng 2 số sẽ hiểu là nối 2 string
+				//cần ép kiểu sang kiểu số với các giá trị này 
+				//sử dụng hàm parseInt
+				number1 = parseInt(number1);
+				number2 = parseInt(number2);
+				var sum = number1 + number2;
+				result = 'Tổng = ' + sum;
+			}
+			// + Hiển thị biến error và result ra màn hình
+			//thông qua 2 thẻ h3 đang chờ sẵn
+			document.getElementById('error').innerHTML = error;
+			document.getElementById('result').innerHTML = result;
+			//ngăn ngừa hành vi submit form 
+			event.preventDefault();
+			
+		});
+		
+	</script>
+	
+	
+</body>
+</html>
