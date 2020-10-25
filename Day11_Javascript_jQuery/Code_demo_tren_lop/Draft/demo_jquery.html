@@ -1,0 +1,136 @@
+<!-- demo_jquery.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo jQuery</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//1 - Khái niệm jQuery
+		// - Thư viện viết dựa trên Javascript, giúp thao tác với JS đơn giản hơn
+		// - Hầu hết các website viết bằng PHP đều tích hợp jQuery và thư viện Bootstrap của CSS
+		// 2 - Cài đặt: file đặc trưng duy nhất của thư viện jQuery là jquery-<phiên-bản>.min.js
+		// + Download từ trang chủ của JQuery
+		// + Dùng các link CDN, là các link online
+		// 3 - Tích hợp jQuery vào hệ thống, nhúng file jquery vào, js/jquery-3.4.1.min.js
+	</script>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		// 4 - Chương trình jQuery đầu tiên
+		// + Code jQuery đc nhận biết thông qua ký tự $ hoặc jQuery
+		// + Luôn viết code bên trong hàm ready của document, để đảm bảo code JS luôn chạy sau cùng, hàm ready tương đương với sự kiện onload của JS
+		$(document).ready(function() {
+			console.log('Hello, World');
+		});
+		// 5 - DOM - Document Object Model
+		// - DOM là cây HTML - cấu trúc HTML
+		// 6 - Các module chính của jQuery
+		//Học thuộc là chính !
+		// + Module jQuery Selector
+		//Selector xác định đối tượng HTML sẽ thao tác
+		// Selector trong jQuery giống hệt selector trong CSS
+		//1 số kiểu selector: id - class, tên thẻ, cấp cha-con, thuộc tính thẻ, trạng thái thẻ
+		//Ngoài ra jQuery có thêm các hàm để lấy ra đc selector
+	</script>
+	<h1 id="h1-selector">Thẻ h1 với id=h1-selector</h1>
+	<h2 class="h2-class">Thẻ h2</h2>
+	<input type="text" value="123" />
+	<input type="number" value="456" />
+	<div id="find">
+		<input type="text" />
+		<input type="number" />
+		<input type="email" />
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			//+ hàm find: tìm các selector con cháu ... trong thành phần cha
+			$('#find').find('input[type=text]');
+			//+ hàm parent: lấy thành cha trực tiếp/gần nhất của selector hiện tại
+			$('input[type=email]').parent();
+			//trả về đối tượng là div có id=find
+			// + hàm parents: lấy tất cả thành phần cha của selector hiện tại. Cú pháp:
+			//$(selector).parents();
+			// + hàm children: tìm tất cả thành phần là con trực tiếp/gần nhất trong thành phần cha. cú pháp:
+			//$(selector).children('selector');
+			// + Hàm next: lấy ra selector ngang hàng, nằm phía sau seletor hiện tại. Cú pháp:
+			//$(selector).next();
+			// + Hàm nextAll: lấy ra tất cả selector ngang hàng, nằm phía sau selector hiện tại
+			//$(selector).nextAll('selector');
+			// + Hàm prev và prevAll: ngược lại so với next và nextAll
+
+
+			$('input[type=text]');
+			var obj1 = $('.h2-class');
+			// console.log(obj1);
+		});
+
+		//So sánh 2 cách viết
+		// + Lấy đối tượng sử dụng Javascript
+		var obj_h1 = document.getElementById('h1-selector');
+		obj_h1.innerHTML = 'New';
+		// + Lấy đối tượng sử dụng jQuery
+		$('#h1-selector');
+		$('#h1-selector').html('New');
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// 2 - Module jQuery Attribute
+			// Thao tác với các thuộc tính của HTML
+			// + Get giá trị của thuộc tính: attr(name)
+			var href = $('#a-attr').attr('href');
+			console.log(href);//http://google.vn
+			var target = $('#a-attr').attr('target');//_blank
+			// + Set giá trị cho thuộc tính: attr(name, value);
+			$('#a-attr').attr('href', '#');
+			// + Xóa thuộc tính: removeAttr(name)
+			$('#a-attr').removeAttr('target');
+			// + Kiểm tra xem có class hay ko dựa vào tên class: hasClass(class-name)
+			var check = $('#a-attr').hasClass('class123');
+			console.log(check);//false
+			// + Xóa class: removeClass(class-name)
+			$('#a-attr').removeClass('class3');
+			// + CSS cho đối tượng: css(name, value)
+			$('#a-attr').css('color', 'red');
+			// + Set nội dung cho đối tượng: html(value), text(value)
+			$('#a-attr').html('Nội dung mới cho thẻ a');
+			// + Get nội dung: html(), text()
+			var html = $('#a-attr').html();
+			//Nội dung mới cho thẻ a
+			// + Get/set giá trị cho 1 input
+			//Vẫn có thể lấy giá trị của input sử dụng hàm attr, tuy nhiên với các input thì có 1 hàm thông dụng hơn, là hàm: val
+			// Lấy giá trị
+			var value = $('#input-attr').val();
+			// Set giá trị
+			$('#input-attr').val('abc123');
+
+			// 3 - jQuery DOM: thao tác với cây DOM
+			// + Xóa phần tử: selector.remove()
+			// $('#input-attr').remove();
+			// + Thêm phần tử vào sau và ngang hàng selector hiện tại: selector.after(element)
+			$('#input-attr').after('<b>Thẻ b sau</b>');
+			$('#input-attr').before('<b>Thẻ b sau</b>');
+			// + Thêm phần tử vào nội dung bên trong của selector: append, prepend
+			//selector.append(element);
+			//selector.prepend(element);
+			// 4 - jQuery Event: xử lý sự kiện
+			//jQuery viết lại các hàm gọi sự kiện của Javascript, jQuery lấy tên sự kiện làm tên hàm luôn
+			$('#a-attr').click(function() {
+				alert('Click');
+				// event.preventDefault()
+			});
+			$('#input-attr').keyup(function() {
+				// $(this) tham chiếu đến chính đối tượng hiện tại - cú pháp của jquery
+				//this - cú pháp của javascript
+				console.log($(this).val());
+			})
+		});
+	</script>
+	<input type="text" value="123" id="input-attr" />
+	<a href="http://google.vn" target="_blank" id="a-attr"
+	class="class1 class2 class3">
+		Thẻ a 
+	</a>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!-- chua_bai_tap_ngay_10.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Chữa bài tập ngày 10</title>
+</head>
+<body>
+	<h1>Chữa bài tập 1</h1>
+	<form action="" method="post">
+		Nhập số a:
+		<input type="text" id="number_a" />
+		<br />
+		Nhập số b:
+		<input type="text" id="number_b" />
+		<br />
+		<input type="submit" id="btn-add"
+		value="a + b" />
+		<input type="submit" id="btn-sub"
+		value="a - b" />
+	</form>
+	<h3 style="color: red" id="error"></h3>
+	<h3 style="color: green" id="result"></h3>
+	<script type="text/javascript">
+		//khai báo hàm dùng chung cho tất cả các chức năng
+		function calculate(operator) {
+			//XỬ LÝ FORM
+			// + Khai báo các biến chứa lỗi và kết quả
+			var error = '';
+			var result = '';
+			// + Lấy giá trị của 2 input
+			var obj_number_a = document.getElementById('number_a');
+			var number_a = obj_number_a.value;
+			var obj_number_b = document.getElementById('number_b');
+			var number_b = obj_number_b.value;
+			// + Valiate form - kiểm tra dữ liệu nhập từ form
+			// Ko dc để trống 2 input
+			// phải nhập số: isNaN - is not a number
+			if (number_a == '') {
+				error = 'Number a ko đc để trống';
+				obj_number_a.focus();
+			} else if (number_b == '') {
+				error = 'Number b ko đc để trống';
+				obj_number_b.focus();
+			} else if (isNaN(number_a) || isNaN(number_b)) {
+				error = "Phải nhập số";
+			}
+			// + Xử lý logic bài toán chỉ khi nào ko có lỗi xảy ra
+			if (error == '') {
+				//Thực hiện các phép tính 2 số dựa trên
+				//tham số operator của hàm
+				//giá trị truyền vào cho operator: + -
+				// + Ép kiểu sang kiểu số để thực hiện tính toán, vì javascript khi lấy dữ liệu từ form đang có kiểu dữ liệu là string
+				number_a = parseInt(number_a);
+				number_b = parseInt(number_b);
+				switch (operator) {
+					case '+':
+						result = number_a + number_b;
+						break;
+					case '-':
+						result = number_a - number_b;
+						break;
+				}
+			}
+			// + Hiển thị lỗi và kết quả ra màn hình
+			document.getElementById('error').innerHTML = error;
+			document.getElementById('result').innerHTML = result;
+			// Ngăn ngừa form tải lại, đối tượng event mặc định có sẵn bên trong hàm callback của sự kiện
+			event.preventDefault();
+		}
+		//+ Lấy đối tượng nút Add
+		var obj_add = document.getElementById('btn-add');
+		// + Gắn sự kiện onclick cho đối tượng này
+		obj_add.addEventListener('click', function() {
+			//+ Lấy giá trị của 2 input
+			//+ Validate 2 giá trị: ko để trống, phải 
+			//nhập số
+			//+ Cộng hai số
+			//+ Hiển thị kết quả 
+			// Gọi hàm, truyền giá trị cho tham số là +
+			calculate('+');
+		});
+
+		//Lấy đối tượng của nút -
+		var obj_sub = document.getElementById('btn-sub');
+		obj_sub.addEventListener('click', function() {
+			calculate('-');
+		})
+
+	</script>
+</body>
+</html>
