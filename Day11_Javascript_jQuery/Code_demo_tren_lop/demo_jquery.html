@@ -1,0 +1,210 @@
+<!-- demo_jquery.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>JQuery</title>
+	<!-- Tích hợp jQuery vào hệ thống -->
+	<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+	<!-- Tích hơp jQuery thông qua link CDN -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+</head>
+<body>
+	<script type="text/javascript">
+		//1 - Khái niệm
+		// + Đặc thù của website PHP thường sử dụng thư
+		//viện jQuery để tương tác với HTML thay vì Javascript thuần
+		// + jQuery cú pháp đơn giản, dễ dùng hơn rất nhiều so với Javascript thuần
+		// + Bootstrap cũng phải dựa vào jquery thì mới tương tác đc với HTML
+		// + Học jQuery là học các module
+		// 2 - Tích hợp jQuery
+		// + Download file jquery-<version>.min.js 
+		// Sau khi download đc file jquery-3.5.1.min.js,
+		//copy vào đường dẫn: js/jquery-3.5.1.min.js, thư mục js ngang hàng với file .html hiện tại
+		// Test xem nhúng jQuery thành công hay chưa
+		// + Mọi code jquery do bạn viết đều nằm trong
+		//document.ready
+		$(document).ready(function() {
+			// alert('test');
+		});
+		// + Sử dụng link cdn từ bên ngoài
+
+		// 3 - DOM - Document Object Model
+		// - Là cây cấu trúc mô tả các đối tượng HTML
+
+		// 4 - Các module chính trong jQuery
+		// - jQuery Selector: 
+		// Dùng để xác định đối tượng HTML sẽ thao tác
+		// Dùng cú pháp selector của CSS để xác định đối
+		//tượng HTML
+		// Cú pháp khác của document.ready
+		// $(function() {
+		// });
+		$(document).ready(function() {
+			//LẤy đối tượng HTML theo id dựa theo JSthuần
+			var obj_p1 = document.getElementById('p1');
+			//jQuery
+			var obj_p2 = $('#p1');
+			console.log(obj_p2);
+			//Lấy selector theo class
+			var obj_p3 = $('.class-p');
+			// Tên thẻ
+			var obj_p4 = $('p');
+			// Thuộc tính thẻ
+			$('input[type=text]');
+			// Cấp
+			$('#parent p');
+			// Cú pháp lấy selector của jQuery giống hệt CSS
+			// + 1 số hàm có sẵn của jQuery dùng để xác định selector
+			// Tìm theo con/cháu ... của thành phần cha
+			//$(selector).find(selector)
+			$('#parent').find('p');// 4 thẻ p
+			// Tìm con trực tiếp của thành cha:
+			//$(selector).children(selector)
+			$('#parent').children('p'); //p1,p2,p3
+			// Tìm cha trực tiếp từ con:
+			//$(selector).parent()
+			$('#parent p').parent();//
+			// Tim tất cả cha từ con ko phân biệt cấp độ
+			// $(selector).parents(selector);
+			$('#parent').parents();//body, html
+			// Tìm 1 đối tượng ngang hàng ngay phía trước selector hiện: prev
+			$('#a2').prev(); //#a1
+			// Ngược với prev là next
+			$('#a2').next(); //#a3
+			// LẤy tất cả đối tượng phía trước select hiện tại: prevAll(selector);
+			$('#a3').prevAll();//a2,a1 ...
+			// Ngược lại prevAll là nextAll
+			$('#a1').nextAll(); //a2, a3 ...
+
+			// - jQuery Attribute: cho phép thao tác với bất cứ thuộc tính nào của thẻ: type, value, placeholder, title, href ...
+			// + Lấy giá trị thuộc tính: attr('')
+			var title = $('#a4').attr('title');//Thẻ a
+			$('#a4').attr('href'); //abc.com
+			// + Set giá trị mới cho thuộc tính:
+			//attr(tên, giá-trị)
+			$('#a4').attr('href', 'https://google.vn');
+			// + Xóa thuộc tính:
+			//selector.removeAttr(tên-thuộc-tính)
+			$('#a4').removeAttr('title');
+			// + Kiểm tra có class theo tên hay ko:
+			//selector.hasClass(tên-class)
+			var is_class = $('#p5').hasClass('class1');
+			//true
+			$('#p5').hasClass('abcsadsa'); //false
+			// + CSS cho selector: css(attr, value)
+			$('#p5').css('color', 'red');
+			// + Xóa class theo tên: selector.removeClass(tên-class)
+			$('#p5').removeClass('class3');
+			// + Get text của selector
+			// selector.html(), selector.text()
+			$('#p5').html(); //Thẻ p
+			// + Set text cho selector:
+			// selector.html(giá-trị)
+			// selector.text(giá-trị)
+			$('#a4').html('Thẻ a4 new');
+			// + Get/set giá trị của các input form:
+			//selector.val()
+			// Có thể dùng hàm attr để lấy, tuy nhiên với input thì dùng hàm val vì ngắn gọn
+			// Get
+			$('input[type=text]').val(); //123
+			// Set
+			$('input[type=text]').val('abc123456');
+
+			// - jQuery DOM
+			// Thao tác với DOM như xóa/thêm
+			// Xóa hẳn selector khỏi DOM: selector.remove();
+			$('#p6').remove();
+			// Thêm vào trước selector hiện tại, ngang hàng với selector hiện tại:
+			// selector.before(html/text tương ứng);
+			$('.s1').before('<a>Thẻ a trước s1</a>');
+			// Ngược lại với before -> after
+			$('.s1').after('<a>Thẻ a sau s1</a>');
+			// Thêm vào nội dung của selector hiện tại, ở đầu nội dung đó:
+			//selector.prepend(html/text)
+			$('.s1').prepend('text trước nội dung');
+			// Ngược lại với prepend -> append
+
+			// - jQuery Event
+			// jQuery viết lại các sự kiện của Javascript thuần
+			$('#a8').click(function() {
+				alert($(this).html());
+			});
+			$('#a8').mouseenter(function() {
+				$(this).css('background', 'red');
+			})
+			$('#a8').mouseleave(function() {
+				$(this).css('background', 'initial');
+			})
+			// - jQuery Effect: hiệu ứng ẩn/hiện/chuyển động...
+			// Ẩn selector: selector.hide(speed); speed tính bằng mili giây, 1s = 1000ms
+			// Hiển thị: selector.show(speed);
+			$('#show').click(function() {
+				$('#h1').show(5000);
+			});
+			$('#hide').click(function() {
+				$('#h1').hide(4000);
+			});
+			// Tự động chuyển đổi show/hide dựa vào trạng thái hiện tại:
+			//selector.toggle(speed)
+			$('#toggle').click(function() {
+				$('#h1').toggle(3000);
+			})
+			// fadeIn: giống show nhưng dùng cơ chế fade để show
+			// fadeOut: giống hide nhưng dùng cơ chế fade để hide
+			// Tạo hiệu ứng chuyển động phức tạp:
+			// selector.animate(obj, speed)
+			$('#a10').click(function(){
+				var obj = {
+					width: "80%",
+					opacity: 0.5,
+					marginLeft: '50px',
+					fontSize: '40px',
+					borderWidth: '5px'
+				};
+				$('#div1').animate(obj, 5000);
+			})
+			// - jQuery Ajax
+			// Dùng để tương tác với server, học khi sang PHP đến phần kết nối CSDL
+		});
+	</script>
+	<a href="#" id="a10">Click để di chuyển div</a>
+	<div id="div1">Thẻ div1</div>
+
+
+	<button id="toggle">
+		Click để show/hide h1 tự động
+	</button>
+	<h1 id="h1">Thẻ h1</h1>
+	<button id="show">Click để hiển thị h1</button>
+	<button id="hide">Click để ẩn h1</button>
+
+	<a href="#" id="a8">Thẻ a8</a>
+
+	<span class="s1">Thẻ span s1</span>
+
+	<p id="p6">Thẻ p này sẽ bị xóa</p>
+
+	<input type="text" value="123" name="abc" />
+
+	<p id="p5" class="class1 class2 class3">Thẻ p</p>
+	<a id="a4" href="abc.com" title="Thẻ a">Thẻ a4</a>
+	<a href="#" id="a1">Thẻ a1</a>
+	<a href="#" id="a2">Thẻ a2</a>
+	<a href="#" id="a3">Thẻ a3</a>
+
+	<div id="parent">
+		<p>Thẻ p1</p>
+		<p>Thẻ p2</p>
+		<p>Thẻ p3</p>
+		<div>
+			<p>Thẻ p4</p>
+		</div>
+	</div>
+
+	<input type="text" value="" />
+	<p class="class-p">Thẻ p với class</p>
+	<p id="p1">Demo jquery selector với thẻ p</p>
+
+</body>
+</html>
