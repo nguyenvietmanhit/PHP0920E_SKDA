@@ -1,0 +1,92 @@
+<!-- jquery_ui.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo jQuery UI</title>
+	<!-- 
+	Demo về jQuery UI -	User Interface
+	- Là 1 thư viện free viết dựa trên jQuery
+	- Cung cấp các component có sẵn về giao diện 
+	và chức năng
+	Cách tích hợp jQuery UI: nhúng các file
+	- jquery-ui.min.css: giao diện
+	- jquery-ui.min.js: chức năng
+	Tích hợp:
+-->
+	<link rel="stylesheet" href="css/jquery-ui.min.css" />
+	<!-- Luôn phải nhúng jquery trước -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+</head>
+<body>
+<script>
+  $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+  </script>
+
+  <ul id="sortable">
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+</ul>
+
+
+<div class="ui-widget">
+  <label for="tags">Tags: </label>
+  <input id="tags">
+</div>
+	<script>
+  $( function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
+
+	<div id="draggable" class="ui-widget-content">
+	  <p>Drag me around</p>
+	</div>	
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+  </script>
+
+	<p>Date: <input type="text" id="datepicker"></p>
+	<script>
+		$( function() {
+		    $( "#datepicker" ).datepicker();
+		  });
+	</script>
+</body>
+</html>

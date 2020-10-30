@@ -1,0 +1,73 @@
+<!-- chua_bt_ngay_11.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8" />
+	<title>Chữa bài tập 1 ngày 11</title>
+	<!-- Tích hợp jquery vào hệ thống -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// - Lấy ra đối tượng form, gọi sự kiện submit trên nó
+			// document.getElementById('form');
+			// Đối tượng lấy bằng jQuery sẽ khác so với đối tượng lấy bằng Javascript thuần
+			// - Tạo 2 biến chứa lỗi hoặc kết quả
+			var error = '';
+			var result = '';
+			$('#form').submit(function() {
+				// - Lấy dữ liệu từ form
+				var number1 = $('#number1').val();
+				var number2 = $('#number2').val();
+				// - Validate form
+				// + Ko đc để trống cả 2 trường
+				// + Phải nhập số
+				if (number1 == '' || number2 == '') {
+					error = 'Phải nhập cả 2 trường';
+					// Đặt con trở chuột vào input number 1 khi có lỗi
+					$('#number1').focus();
+				} else if (isNaN(number1) || isNaN(number2)) {
+					error = 'Phải nhập số';
+				}
+				// - Xử lý logic bài toán chỉ khi ko có lỗi nào xảy ra
+				if (error == '') {
+					// Ép kiểu chuỗi về số, do các input
+					//lấy từ form về mặc định là kiểu string: parseInt
+					number1 = parseInt(number1);
+					number2 = parseInt(number2);
+					// Tính chu vi hcn:
+					var perimeter = (number1 + number2) * 2;
+					// Tính diện tích hcn:
+					var area = number1 * number2;
+					result += "Chu vi hcn = " + perimeter;
+					result += "<br />";
+					result += "Diện tích hcn = " + area;
+				}
+				// Hiển thị lỗi, kết quả ra các thẻ chờ
+				$('#error').html(error);
+				$('#result').html(result);
+				//Sau khi hiển thị xong, gán lại bằng rỗng
+				//để tránh việc cộng dồn kết quả
+				result = '';
+				// Ngăn ngừa hành vi tải lại trang khi submit form, để giữ lại lỗi và kết quả
+				event.preventDefault();
+			});
+		});
+	</script>
+	<!-- Khai báo thẻ ở trạng thái chờ -->
+	<h3 id="error" style="color: red"></h3>
+	<h3 id="result" style="color: green"></h3>
+	<h1>Tính chu vi và diện tích hình chữ nhật</h1>
+	<form method="post" action="" id="form">
+		Nhập vào chiều dài (đơn vị met):
+		<input type="text" id="number1" value="" />
+		<br />
+		Nhập vào chiều rộng (đơn vị met):
+		<input type="text" id="number2" value="" />
+		<br />
+		<input type="submit" value="Tính chu vi và diện tích" />
+		<input type="reset" value="Xóa thông tin form">
+	</form>
+</body>
+</html>
