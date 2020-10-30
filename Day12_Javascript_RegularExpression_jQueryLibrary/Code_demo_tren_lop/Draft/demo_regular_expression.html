@@ -1,0 +1,155 @@
+<!-- demo_regular_expression.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Demo Regular Expression trong JS</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 1 - Khái niệm
+		// Biểu thức quy tắc như là 1 mẫu cho phép kiểm tra dữ liệu theo 1 quy tắc cho trước
+		// VD: tạo 1 mật khẩu có ít nhất 6 ký tự, bắt buộc phải chứa ít nhất 1 ký tự hoa và 1 ký tự đặc biệt, thì khi đó thường sẽ phải sử dụng biểu thức chính quy để xây dựng
+		// 2 - Ví dụ
+		// Viết 1 biểu thức quy tắc để kiểm tra 1 chuỗi bất kỳ xem có kết thúc bằng .com hay ko
+		// abc.com -> hợp lệ
+		// abc.org -> ko hợp lệ
+		var regex = /\.com$/;
+		var test1 = regex.test('abc.org'); 
+		console.log(test1); //false
+		var test2 = regex.test('a.com');
+		console.log(test2); //true
+		// Biểu thức quy tắc thường được dùng khi validate dữ liệu kiểu phức tạp và trong kỹ thuật rewrite URL (backend)
+
+		// 3 - Khởi tạo chuỗi regex
+		// Có 2 cách:
+		var regex = /\.com$/; //hay dùng cách 1
+		var regex2 = new RegExp(/\.com$/);
+
+		// 4 - Kiểm tra regex là đúng hay sai
+		// Sử dụng hàm test(), trả về true/false dựa vào chuỗi truyền vào
+		var regex = /abc/;
+		var test = regex.test('Hello abc');
+		console.log(test); //true
+		var test2 = regex.test('acb');
+		console.log(test2); //false
+
+		// 5 - Thực thi regex
+		// Tìm kiếm trong chuỗi test của bạn, nếu tìm thấy khớp với chuỗi regex thì sẽ trả về mảng chứa vị trí xuất hiện đầu tiên của chuỗi đó
+		var regex1 = /abc/;
+		var arr = regex1.exec('Hello abc abc 123');
+		console.log(arr); //chuỗi abc bắt đầu xuất hiện từ vị trí thứ 6
+
+		// 6 -- Một số điều kiện có sẵn của regex
+		// \d - digit - đại diện cho 1 ký tự là số [0-9]
+		var regex_d = /\d/;
+		// var regex_d = /[0-9]/
+		console.log(regex_d.test('abc')); //false
+		console.log(regex_d.test('abc123')); //true
+		// \D - ký tự ko phải số, phủ định của \d
+		var regex_D = /\D/;
+		// var regex_D = /[^0-9]/;
+		console.log(regex_D.test("12345"));//false
+		console.log(regex_D.test("a12345")); //true
+		// \w - word - chứa ký tự chữ hoặc số
+		var regex_w = /\w/;
+		// var regex_w = /[0-9a-zA-Z]/
+		console.log(regex_w.test('a1')); //true
+		console.log(regex_w.test('#')); //false
+		console.log(regex_w.test('#123')); //true
+		// \W - phủ định của w - ko chứa ký tự số và chữ
+		var regex_W = /\W/;
+		// var regex_W = /[^0-9a-zA-Z]/
+		console.log(regex_W.test("a1")); //false
+		console.log(regex_W.test("#12323")); //true
+
+		// \s - space - chứa khoảng trắng, dấu cách, dấu tab, enter xuống dòng
+		var regex_s = /\s/;
+
+		// \S - ^space - ko chứa khoảng trắng, dấu cách, dấu tab, enter xuống dòng
+		var regex_s = /\S/;
+		// 7 - Các điều kiện hay sử dụng với regex
+		// - Phải xuất hiện ở đầu chuỗi: ^
+		//bắt buộc đầu chuỗi phải là: nvmanh
+		var regex1 = /^nvmanh/;
+		//nvmanh123 -> true
+		//     nvmanh123   => false
+		// - Phải xuất hiện ở cuối chuỗi: $
+		// bắt buộc cuối chuôi phải là nvmanh
+		var regex2 = /nvmanh$/;
+		// nvmanh -> true
+		// nvmanh123; //false
+
+		// So sánh tuyệt đối: kết hợp cả ^ và $
+		// chuỗi phải là nvmanh
+		var regex3 = /^nvmanh$/;
+		// nvmanh -> true
+		//    nvmanh     -> false
+		// Đại diện cho 1 chuỗi ký tự bất kỳ: .*
+		// VD: chuỗi bắt đầu phải là Name, kết thúc phải là nvmanh, ở giữa thì là gì cũng đc
+		var regex4 = /^Name.*nvmanh$/;
+		// Name is nvmanh -> true
+			// Namenvmanh -> true
+			//Namenvmanhis -> false
+		// - Phải nằm trong 1 khoảng nào đó: []
+		// [a-z]: ký tự nằm trong khoảng từ a-z
+			// [b-d]: b, c, d
+			// [A-Z] ký tự hoa từ A -> Z trong bảng chữ cái
+			// [0-9]: ký tự số tự 0 - 9
+			//[0- 3]: 0, 1, 2, 3
+			// [a-zA-Z0-9]: ký tự thường, hoa, số đều hợp lệ
+			var regex5 = /[a-z]/;
+			// abc -> true
+			//123a -> true
+			// 123456 -> false
+			// - Đảo ngược kết quả: [^]
+			var regex6 = /[^a-z]/;
+			// abc -> false
+			//123a -> true
+			//123 => true
+			console.log(regex6.test('123'));//true
+
+			// Điều kiện hoặc: |
+			var regex7 = /manh|nvmanh/;
+			// helo manh -> true
+			//manh and nvmanh -> true
+			//manhnv and -> false
+
+			// - Ký tự xuất hiện mấy lần: {số-lần}
+			//ký tự là số phải xuất hiện đúng 3 lần
+			var regex8 = /[0-9]{3}/;
+			// 1234 -> false
+			// 123 -> true
+			// abc123 -> true
+			//abc12abc456 -> true
+			console.log(regex8.test('abc12abc456'));
+			//ký tự là chữ thường, xuất hiện từ 2, 5 lần
+			var regex9 = /[a-z]{2,5}/;
+			// 12345 -> false
+			//ab12345a -> true
+			//ký tự là chữ thường, xuất hiện >=2 lần
+			var regex10 = /[a-z]{2,}/;
+			// - Điều kiện ko bắt buộc: ?
+			var regex11 = /[0-9]?/;
+			// abc -> true
+			// - Biểu diễn ký tự đặc biệt: \
+			// Regex đã sử dụng 1 số ký tự đặc biệt sau:
+			// {} [] / \ + * . $ ^
+			var regex12 = /\.com$/;
+			// - Nhóm các điều kiện : ()
+			//ký tự số xuất hiện 2 lần, và cả nhóm này xuất hiện ít nhất 1 lần
+			var regex13 = /^([0-9]{2}){1,}$/;
+			// 3 => false
+			// 1234 => true
+			// 232 => false
+			console.log(regex13.test('232'))
+
+
+			var test1 = /nvmanh/;
+			var test2 = /m{1,}/;
+			var test3 = /[0-9]/;
+			var test4 = /^(?=.*[0-9]{1,})(?=.*[a-z]{1,})(?=.*[A-Z]{1,})[0-9a-zA-Z]{6,}$/;
+
+ 	</script>
+</body>
+</html>

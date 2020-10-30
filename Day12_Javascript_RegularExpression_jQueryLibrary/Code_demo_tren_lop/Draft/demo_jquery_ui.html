@@ -1,0 +1,87 @@
+<!-- demo_jquery_ui.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo jQuery UI</title>
+	<!-- jquery UI - 1 thư viện miễn phí đc viết dựa trên jquery, cung cấp các ứng dụng, widget, hiệu ứng nâng hơn so với jquery -->
+	<!-- Để cài đặt jquery ui, cần tải về, và sử dụng 2 file sau: -->
+	<!--
+	jquery-ui.min.css
+	jquery-ui.min.js
+-->
+<link rel="stylesheet" href="css/jquery-ui.min.css" />
+<!-- do jquery ui đc viết dựa trên jquery, nên cần nhúng file jquery trước -->
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+</head>
+<body>
+
+	<script>
+		// cú pháp function(){} tương đương với document.ready
+	  $( function() {
+	    $( "#datepicker" ).datepicker();
+	  } );
+  	</script>
+<p>Date: <input type="text" id="datepicker"></p>
+
+<script>
+  $( function() {
+    $( "#dialog" ).dialog();
+  } );
+  </script>
+  <div id="dialog" title="Basic dialog">
+  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+</div>
+
+AUtoComppelte
+<script>
+  $( function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
+  <div class="ui-widget">
+  <label for="tags">Tags: </label>
+  <input id="tags">
+</div>
+
+<script>
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+  </script>
+  <div id="draggable" class="ui-widget-content">
+  <p>Drag me around</p>
+</div>
+<style>
+  #draggable { width: 150px; height: 150px; padding: 0.5em; }
+  </style>
+
+</body>
+</html>
+

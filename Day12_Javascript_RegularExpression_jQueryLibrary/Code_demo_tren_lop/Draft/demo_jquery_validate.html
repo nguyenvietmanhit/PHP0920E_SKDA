@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo jquery validate</title>
+	<!-- Là thư viện viết dựa trên jquery, cho phép validate theo kiểu realtime - thông báo lỗi ngay khi user nhập sai mà chưa cần submit form -->
+	<!-- để tích hợp jquery validate cần tải file tương ứng trên trang chủ của jquery validate là jquery.validate.min.js -->
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+</head>
+<body>
+	<!-- jqueryvalidate sẽ check validate dựa vào thuộc tính name của input, nên cần bắt buộc phải khai báo thuộc tính name cho input -->
+	<form id="form">
+		Name:
+		<input type="text" name="name" value="" />
+		<br />
+		Age:
+		<input type="text" name="age" value="" />
+		<br />
+		<input type="submit" value="Check validate" />
+	</form>
+	<style type="text/css">
+		.red {
+			color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//tạo 1 đối tượng lưu các thông tin khi xử lý validate
+			var obj_validate = {
+				//cho phép thay đổi lại vị trí hiển thị thông báo lỗi
+				errorPlacement: function(error, element) {
+					// tham số error chính là đối tượng chứa thông báo lỗi
+					//tham số element chính là input đang đổ ra lỗi đó
+					error.insertAfter(element);
+					error.wrap("<p class='red'>");
+				},
+				//thuộc tính rules là nơi khai báo các rule validate dựa theo name
+				rules: {
+					name: {
+						required: true
+					},
+					age: {
+						required: true,
+						number: true,
+						min: 10,
+						max: 20
+					}
+				},
+				//custom lại message hiên thị lỗi theo ý của bạn
+				messages: {
+						name: {
+							required: "Không đc để trống trường name"
+						},
+						age: {
+							required: "Không để trống age",
+							number: "Phải nhập số",
+							min: "Tối thiểu phải là 10",
+							max: "Tối đa là 20"
+						}
+				}
+			};
+			//gọi hàm validate của thư viện jquery validate
+			$('#form').validate(obj_validate);
+		});
+	</script>
+</body>
+</html>

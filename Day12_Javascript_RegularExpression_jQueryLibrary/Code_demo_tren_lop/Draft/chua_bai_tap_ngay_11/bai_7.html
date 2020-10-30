@@ -1,0 +1,148 @@
+<!--
+Code_demo_tren_lop/chua_bai_tap_ngay_11/bai_7.html
+Xây dựng ứng chat đơn giản, sử dụng jQuery
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chữa bài tập 7 ngày 11</title>
+	<!-- Tích hợp jQuery thông qua file js/jquery-3.4.1.min.js -->
+	<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<h1>Chữa bài 4</h1>
+	<form id="form-4">
+		<h4>Số nguyên tố</h4>
+		<input type="number" id="number" />
+		<br />
+		<input type="submit" value="Kết quả" />
+	</form>
+	<h3 id="result" style="color: green"></h3>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//kiểm tra tham số number có phải là số nguyên tố hay ko
+			function isPrime(number) {
+				// nếu number < 2 thì ko phải số nguyên tố
+				if (number < 2) {
+					return false;
+				}
+				//mặc định number là số nguyên tố, là 1 cờ để xác định số nguyên tố hay
+				var is_prime = true;
+				//xử lý kiểm tra số nguyên tố để set biến is_prime = false
+				for (var i = 2; i <= Math.sqrt(number); i++) {
+					//nếu tại từng thời điểm lặp phát hiện  number chia hết cho biến lặp, thì gắn cờ = false, thoát vòng lặp 
+					if (number % i == 0) {
+						is_prime = false;
+						break;
+					}
+				}
+
+				return is_prime;
+			}
+			$('#form-4').submit(function() {
+				var number = $('#number').val();
+				var result = 'Các số nguyên tố từ 1 đến ' + number + ' là: ';
+
+				// + lấy các số nguyên tố <= biến number 
+				for (var i = 1; i <= number; i++) {
+					if (isPrime(i) == true) {
+						result += i + ',';
+					}
+				}
+				// Hiển thị biến isPrime ra màn hình:
+				$('#result').html(result);
+				// Ngăn ngừa tải lại trang khi submit form
+				event.preventDefault();
+			});
+		});
+	</script>
+
+
+	<div class="container">
+		<div class="box-chat">
+			<div class="box-name">
+				Ứng dụng chat
+			</div>
+			<div class="box-content">
+				<!-- Message content -->
+				<div class="message">
+					<div class="message-content">
+						Chào bạn
+					</div>
+					<div class="message-time">
+						25/08/2020 18:50
+					</div>
+				</div>
+				<hr />
+				<!-- End Message content -->
+				<!-- Message content -->
+				<div class="message">
+					<div class="message-content">
+						Hiii
+					</div>
+					<div class="message-time">
+						25/08/2020 19:12
+					</div>
+				</div>
+				<hr />
+				<!-- End Messe content -->
+			</div>
+			<form action="" method="post">
+				<input type="text" id="message" value="" />
+				<br />
+				<input type="submit" value="Gửi" />
+			</form>
+		</div>
+	</div>
+	<h3 id="error" style="color: red"></h3>
+	<script type="text/javascript">
+		//Hàm JS lấy ra thời gian hiện tại của hệ thống
+		function getCurrentDateTime() {
+		    var currentdate = new Date();
+		    var datetime = currentdate.getDate() + "/"
+		        + (currentdate.getMonth()+1)  + "/"
+		        + currentdate.getFullYear() + " "
+		        + currentdate.getHours() + ":"
+		        + currentdate.getMinutes();
+		    // + currentdate.getSeconds();
+		    return datetime;
+		}
+
+
+
+		// sử dụng jquery
+		$(document).ready(function() {
+			// do trong form đang chỉ có 1 thẻ form duy nhất nên
+			//có thể lấy selector theo thẻ form
+			// + Gọi sự kiện submit trên thẻ form
+			$('form').submit(function() {
+				var error = '';
+				var result = '';
+				// + LẤy giá trị của input message
+				var message = $('#message').val();
+				// alert(message);
+				// + Validate form, nếu message trống thì báo lỗi
+				if (message == '') {
+					error = 'Message ko dc để trống';
+					//focus con trỏ chuột vào input hiện tại
+					$('#message').focus();
+				}
+				// + Xử lý nối message vào box chat, chỉ khi nào ko có lỗi xảy ra
+				if (error == '') {
+					//copy khối HTML tĩnh của message tương ứng, đổ dữ liệu động bao gồm: message gửi lên và thời gian gửi
+					// Lưu ý khi viết code HTML trong Javascript phải viết các thẻ HTML ko đc chứa dký tự xuống dòng (phải nằm trên 1 hàng)
+					var datetime = getCurrentDateTime();
+					result = '<div class="message"><div class="message-content">' + message + '</div><div class="message-time">' + datetime + '</div></div> <hr />';
+					// Gắn nội dung trên vào trong khối có class = box-content, sử dụng hàm append của jQuery
+					$('.box-content').append(result);
+				}
+
+				// + Hiển thị error ra màn hình
+				$('#error').html(error);
+				// + Ngăn ngừa hành vi tải lại trang của form khi submit
+				event.preventDefault();
+			});
+		})
+	</script>
+</body>
+</html>
