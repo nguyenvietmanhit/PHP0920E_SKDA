@@ -1,0 +1,74 @@
+<!-- demo_jquery_continue.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo jQuery Continue</title>
+	<!-- Tích hợp thư viện jQuery -->
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// 5 - Module jQuery Effect:
+			// + Cung cấp 1 số hiệu ứng cho các phần tử như ẩn, hiện ...
+			// + Hàm ẩn selector: select.hide(speed), speed tính bằng miligiây: 1s = 1000ms
+			// + Hàm hiển thị selector: selector.show(speed)
+			$('#click-to-hide').click(function() {
+				$('#h1-show-hide').hide(5000);
+			});
+			$('#click-to-show').click(function() {
+				$('#h1-show-hide').show(3000);
+			})
+			// + Hàm show/hide selector dựa vào trạng thái hiện tại: nếu như đang hide -> show và ngược lại: toggle(speed)
+			$('#click-to-toggle').click(function() {
+				$('#h1-show-hide').toggle(3000);
+			});
+			// + Hàm show theo hiệu ứng dạng fade: selector.fadeIn(speed)
+			// + Hàm hide theo hiệu ứng dạng fade: selector.fadeOut(speed)
+			// + Hàm set hiệu ứng kiểu tùy chọn, cách sử dụng cần tham khảo google là chính: selector.animate(object)
+			$('#click-to-animate').click(function() {
+				//khai báo 1 object:
+				var properties = {
+					width: '70%',
+					opacity: 0.5,
+					marginLeft: '50px',
+					fontSize: '40px',
+					borderWidth: '16px'
+				};
+				$('#h1-show-hide').animate(properties, 5000);
+			});
+
+			// 6 - Module jQuery Ajax:
+			// Ajax là kỹ thuật cho phép thao tác với dữ liệu trên server mà ko cần tải lại trang
+			// Nên sử dụng jQuery để thao tác với Ajax hơn là sử dụng Javascript thuần
+			// VD: gửi 1 ajax lên server sử dụng jQuery: $.ajax(object_ajax)
+			var obj_ajax = {
+				//url xử lý ajax gửi lên
+				url: 'get_data.php',
+				//phương thức gửi dữ liệu: post/get
+				method: 'get',
+				//dữ liệu muốn gửi lên
+				data: {
+					name: 'Mạnh',
+					age: 30
+				},
+				//hàm nhận kết quả sau khi url xử lý ajax xong, chứa thông qua tham số data
+				success: function(data) {
+					console.log(data);
+				}
+			};
+			//goi ajax
+			$.ajax(obj_ajax);
+		});
+	</script>
+	<h1 id="h1-show-hide">Thẻ h1</h1>
+	<button id="click-to-animate">
+		Click để xem hiệu ứng chuyển động của thẻ h1
+	</button>
+
+	<button id="click-to-toggle">Click để show/hide</button>
+
+	<a href="#" id="click-to-hide">Click để ẩn thẻ h1</a>
+	<a href="#" id="click-to-show">Click để show thẻ h1</a>
+</body>
+</html>
