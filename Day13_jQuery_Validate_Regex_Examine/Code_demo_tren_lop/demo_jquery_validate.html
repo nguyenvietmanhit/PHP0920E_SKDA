@@ -1,0 +1,83 @@
+<!-- demo_jquery_validate.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Demo jQuery Validate</title>
+	<!-- Tích hợp jQuery Validate -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+</head>
+<body>
+	<!--
+	Thư viên jQuery Validate
+	- Viết dựa trên jQuery, validate form theo kiểu
+	realtime - validate input mà ko cần submit form
+	- Tải thư viện jQuery Validate về: jquery.validate.min.js
+	 -->
+	 <form id="form" action="" method="post">
+	 	Nhập tên:
+	 	<!-- jQuery validate sẽ validate dựa vào thuộc tính name của input -->
+	 	<input type="text" name="fullname" />
+	 	<br />
+	 	Nhập email:
+	 	<input type="text" name="email" />
+	 	<br />
+	 	Nhập tuổi trong khoảng từ 10 -> 30:
+	 	<input type="text" name="age" />
+	 	<br />
+	 	<input type="submit" value="Gửi thông tin" />
+	 </form>
+
+	 <script type="text/javascript">
+	 	$(document).ready(function() {
+	 		// Áp dụng jQuery Validate để validate realtime cho form trên
+	 		var obj_validate = {
+	 			// Khai báo các rule validate
+	 			rules: {
+	 				fullname: {
+	 					// Bắt buộc nhập
+	 					required: true,
+	 					// Nhập tối thiểu 3 ký tự
+	 					minlength: 3
+	 				},
+	 				email: {
+	 					// Phải có định dạng email
+	 					email: true
+	 				},
+	 				age: {
+	 					// Phải nhập số
+	 					number: true,
+	 					// Nhập trong khoảng 10 -> 30
+	 					min: 10,
+	 					max: 30
+	 				}
+	 			},
+	 			// Khai báo các message custom cho các rule
+	 			messages: {
+	 				fullname: {
+	 					required: 'Phải nhập tên',
+	 					minlength: 'Nhập ít nhất 3 ký tự'
+	 				},
+	 				email: {
+	 					email: 'Phải nhập định dạng email'
+	 				},
+	 				age: {
+	 					number: 'Phải nhập số',
+	 					min: 'Phải nhập số min = 10',
+	 					max: 'Phải nhập số max = 30'
+	 				}
+	 			},
+	 			// tùy chỉnh vị trí hiển thị lỗi
+	 			errorPlacement: function(error, element) {
+	 				error.insertBefore(element);
+	 				// Thêm class bao ngoài cho error để tiện css
+	 				error.wrap('<span class="test">');
+	 			}
+	 		};
+	 		// Gọi hàm validate trên obj form
+	 		$('#form').validate(obj_validate);
+	 	});
+	 </script>
+</body>
+</html>

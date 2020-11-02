@@ -1,0 +1,96 @@
+<!-- on_tap_javascript.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Ôn tập Javascript</title>
+</head>
+<body>
+	<!-- KHai báo id cho các thẻ HTML muốn dùng JS để thao tác -->
+	<form id="form" method="post" action="">
+		Họ tên *:
+		<input type="text" id="fullname" />
+		<br />
+		Tuổi *:
+		<input type="text" id="age" />
+		<br />
+		Giới tính *:
+		<input type="radio" name="gender" id="male" /> Nam
+		<input type="radio" name="gender" id="female" /> Nữ
+		<br />
+		<input type="submit" value="Gửi thông tin" />
+	</form>
+	<!-- Vùng chờ để đổ lỗi/ kết quả -->
+	<h3 id="error" style="color: red"></h3>
+	<h3 id="result" style="color: green"></h3>
+
+	<script type="text/javascript">
+		// Xử lý validate form trên bằng Javascript thuần
+		// - Các yêu cầu validate:
+		// + Tất cả các trường có dấu * không đc để trống
+		// + Họ tên phải nhập tối thiểu 4 ký tự, tối đa 10 ký tự
+		// + Tuổi phải nhập số, nhỏ nhất bằng 10
+		// + Giới tính bắt buộc phải chọn
+		// + Hiển thị lỗi mà ko tải lại trang
+		// + Focus con trỏ chuột vào input lỗi nếu có lỗi
+		// + Sau khi valiate thành công, show alert Thành công
+		// BẮT ĐẦU XỬ LÝ
+		// - Tạo biến chứa lỗi và kết quả:
+		var error = '';
+		var result = '';
+		// - Lấy đối tượng form để gắn sự kiện submit
+		var obj_form = document.getElementById('form');
+		// - Gắn sự kiện:
+		obj_form.addEventListener('submit', function() {
+			// - Lấy các đối tượng input và giá trị tương ứng
+			// Lấy đối tượng input Nhập tên
+			var obj_fullname = document.getElementById('fullname');
+			var fullname = obj_fullname.value;
+			// Lấy đối tượng input Nhập tuổi
+			var obj_age = document.getElementById('age');
+			var age = obj_age.value;
+			// Lấy đối tượng của radio Nam
+			// Với radio dựa vào thuộc tính checked để xác định input radio đó có đc tích hay ko
+			var obj_male = document.getElementById('male');
+			// LẤy đối tượng của radio Nữ
+			var obj_female = document.getElementById('female');
+			// - Validate form dựa theo yêu cầu đề bài
+			// + Ko đc để trống tất cả các trường
+			console.log(fullname);
+			console.log(fullname.length < 4);
+			console.log(fullname.length > 10);
+			if (fullname == '') {
+				error = 'Phải nhập tên';
+				//Focus con trỏ chuột vào đối tượng đang bị lỗi
+				obj_fullname.focus();
+			} else if (age == '') {
+				error = 'Phải nhập tuổi';
+				obj_age.focus();
+			} else if (!obj_male.checked && !obj_female.checked) {
+				error = 'Phải tích chọn giới tính';
+				obj_male.focus();
+			} else if (fullname.length < 4 || fullname.length > 10) {
+				error = 'Tên chỉ cho phép 4 -> 10 ký tự';
+				obj_fullname.focus();
+			} else if (isNaN(age)) {
+				error = 'Tuổi phải nhập số';
+				obj_age.focus();
+			} else if (age < 10) {
+				error = 'Tuổi phải nhập nhỏ nhất = 10';
+				obj_age.focus();
+			}
+			console.log(error);
+			// - Show alert khi không có lỗi nào xảy ra
+			if (error == '') {
+				alert('Thành công');
+			}
+			// - Hiển thị lỗi, kết quả ra màn hình theo cơ chế ko tải lại trang
+			// Lấy đối tượng lỗi
+			var obj_error = document.getElementById('error');
+			obj_error.innerHTML = error;
+			// - Ngăn ngừa hành vi tải lại trang khi submit form
+			event.preventDefault();
+		});
+	</script>
+</body>
+</html>
