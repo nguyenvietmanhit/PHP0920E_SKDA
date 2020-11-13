@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="57356519-5be0-4a78-83fa-780444bfbd3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Phim_tat_can_ban_PHPStorm.html" beforeDir="false" afterPath="$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Phim_tat_can_ban_PHPStorm.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,43 +14,44 @@
     <session id="206876991">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="3" />
-          <entry key="php" value="2" />
+          <entry key="php" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="3" />
-          <entry key="PHP" value="2" />
+          <entry key="PHP" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="899" />
-          <entry key="php" value="4233" />
+          <entry key="php" value="11683" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="899" />
-          <entry key="PHP" value="4233" />
+          <entry key="HTML" value="900" />
+          <entry key="PHP" value="11682" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Phim_tat_can_ban_PHPStorm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-16">
+            <state relative-caret-position="470">
               <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
             </state>
           </provider>
@@ -60,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/php_co_ban.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
+            <state relative-caret-position="1081">
               <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
             </state>
           </provider>
@@ -69,7 +69,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Code_demo_tren_lop/hello.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
+            <state relative-caret-position="470">
               <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
               <folding>
                 <element signature="e#212#236#0#PHP" expanded="true" />
@@ -78,14 +78,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Code_demo_tren_lop/php_basic_1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="93" column="14" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
+            <state relative-caret-position="267">
+              <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
               <folding>
                 <element signature="e#6#60#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Day16_PHP_Include_Require_Operator_Condition_Loop/Code_demo_tren_lop/php_basic_2.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="253" column="12" lean-forward="true" selection-start-line="253" selection-start-column="12" selection-end-line="253" selection-end-column="12" />
+              <folding>
+                <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#2;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day16_PHP_Include_Require_Operator_Condition_Loop/Code_demo_tren_lop/test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -110,6 +133,8 @@
         <option value="$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/php_co_ban.html" />
         <option value="$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Code_demo_tren_lop/hello.php" />
         <option value="$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Code_demo_tren_lop/php_basic_1.php" />
+        <option value="$PROJECT_DIR$/Day16_PHP_Include_Require_Operator_Condition_Loop/Code_demo_tren_lop/test.php" />
+        <option value="$PROJECT_DIR$/Day16_PHP_Include_Require_Operator_Condition_Loop/Code_demo_tren_lop/php_basic_2.php" />
       </list>
     </option>
   </component>
@@ -171,6 +196,17 @@
               <item name="Day15_PHP_Setup_Enviroment_And_Basic" type="462c0819:PsiDirectoryNode" />
               <item name="Slides" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
+              <item name="Day16_PHP_Include_Require_Operator_Condition_Loop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
+              <item name="Day16_PHP_Include_Require_Operator_Condition_Loop" type="462c0819:PsiDirectoryNode" />
+              <item name="Code_demo_tren_lop" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -208,12 +244,13 @@
       <option name="presentableId" value="Default" />
       <updated>1599885073315</updated>
       <workItem from="1599885074689" duration="51000" />
-      <workItem from="1604921460868" duration="8305000" />
+      <workItem from="1604921460868" duration="8487000" />
+      <workItem from="1605266092682" duration="9892000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8356000" />
+    <option name="totallyTimeSpent" value="18430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -248,13 +285,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Phim_tat_can_ban_PHPStorm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/dsadsa.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -262,16 +292,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Phim_tat_can_ban_PHPStorm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/php_co_ban.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
+        <state relative-caret-position="1081">
           <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Code_demo_tren_lop/hello.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
+        <state relative-caret-position="470">
           <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding>
             <element signature="e#212#236#0#PHP" expanded="true" />
@@ -281,10 +318,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Code_demo_tren_lop/php_basic_1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="93" column="14" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
+        <state relative-caret-position="267">
+          <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
           <folding>
             <element signature="e#6#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day16_PHP_Include_Require_Operator_Condition_Loop/Code_demo_tren_lop/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day16_PHP_Include_Require_Operator_Condition_Loop/Code_demo_tren_lop/php_basic_2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="253" column="12" lean-forward="true" selection-start-line="253" selection-start-column="12" selection-end-line="253" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#2;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
