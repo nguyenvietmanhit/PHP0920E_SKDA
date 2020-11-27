@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="57356519-5be0-4a78-83fa-780444bfbd3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/test_session.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/test_session.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,41 +15,42 @@
     <session id="206876991">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="3" />
-          <entry key="php" value="10" />
+          <entry key="php" value="16" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="3" />
-          <entry key="PHP" value="10" />
+          <entry key="PHP" value="16" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="899" />
-          <entry key="php" value="33700" />
+          <entry key="php" value="40274" />
           <entry key="txt" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="903" />
-          <entry key="PHP" value="33696" />
+          <entry key="PHP" value="40270" />
           <entry key="PLAIN_TEXT" value="42" />
         </counts>
       </usages-collector>
@@ -57,84 +59,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Code_demo_tren_lop/php_basic_1.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4371">
-              <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
-              <folding>
-                <element signature="e#6#60#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day16_PHP_Include_Require_Operator_Condition_Loop/Code_demo_tren_lop/php_basic_2.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11938">
-              <caret line="254" selection-start-line="254" selection-end-line="254" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day17_PHP_Array_Function_Array_Time/Code_demo_tren_lop/array.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12079">
-              <caret line="265" selection-start-line="265" selection-end-line="265" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/Code_demo/form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1692">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
-              <folding>
-                <element signature="e#6#87#0#PHP" expanded="true" />
-                <element signature="e#1160#1214#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/Code_demo/process_form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1880">
-              <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/Code_demo/form2.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1363">
-              <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/form_upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
-              <folding>
-                <element signature="e#1580#1969#0#PHP" />
-                <element signature="e#1721#1771#0#PHP" />
-                <element signature="e#1712#1777#0#PHP" />
-                <element signature="e#1935#1977#0#PHP" />
-                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#1;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="5922">
+              <caret line="129" selection-start-line="129" selection-end-line="129" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/read_write_file.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="469">
@@ -144,10 +77,68 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/session.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="24" column="17" selection-start-line="24" selection-end-line="24" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/test_session.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="4" column="55" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/cookie.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/login/form_login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+              <folding>
+                <element signature="e#22#228#0#PHP" />
+                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/login/logout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/login/welcome.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/test.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="141">
-              <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -190,6 +181,12 @@
         <option value="$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/form_upload.php" />
         <option value="$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/test.txt" />
         <option value="$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/read_write_file.php" />
+        <option value="$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/session.php" />
+        <option value="$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/test_session.php" />
+        <option value="$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/cookie.php" />
+        <option value="$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/login/welcome.php" />
+        <option value="$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/login/form_login.php" />
+        <option value="$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/login/logout.php" />
       </list>
     </option>
   </component>
@@ -221,6 +218,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,25 +229,25 @@
             <path>
               <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
               <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
-              <item name="Day19_Process_File_Form_Upload" type="462c0819:PsiDirectoryNode" />
+              <item name="Day20_PHP_Session_Cookie" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
               <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
-              <item name="Day19_Process_File_Form_Upload" type="462c0819:PsiDirectoryNode" />
+              <item name="Day20_PHP_Session_Cookie" type="462c0819:PsiDirectoryNode" />
               <item name="Codes_demo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
               <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
-              <item name="Day19_Process_File_Form_Upload" type="462c0819:PsiDirectoryNode" />
-              <item name="Slides" type="462c0819:PsiDirectoryNode" />
+              <item name="Day20_PHP_Session_Cookie" type="462c0819:PsiDirectoryNode" />
+              <item name="Codes_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -293,18 +291,20 @@
       <workItem from="1605526827833" duration="9994000" />
       <workItem from="1605612668954" duration="156000" />
       <workItem from="1605871107856" duration="11954000" />
-      <workItem from="1606133170594" duration="8702000" />
+      <workItem from="1606133170594" duration="8769000" />
+      <workItem from="1606219192500" duration="236000" />
+      <workItem from="1606478159400" duration="9443000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49419000" />
+    <option name="totallyTimeSpent" value="59165000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25567323" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -358,9 +358,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
           <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding>
-            <element signature="e#212#236#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -406,6 +403,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/Code_demo/form2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/form_upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5922">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Day16_PHP_Include_Require_Operator_Condition_Loop/Code_demo_tren_lop/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
@@ -413,39 +431,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/Code_demo/form2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1363">
-          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/form_upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
-          <folding>
-            <element signature="e#1580#1969#0#PHP" />
-            <element signature="e#1721#1771#0#PHP" />
-            <element signature="e#1712#1777#0#PHP" />
-            <element signature="e#1935#1977#0#PHP" />
-            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/read_write_file.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="469">
           <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="24" column="17" selection-start-line="24" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/test_session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="4" column="55" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/cookie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/login/welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/login/form_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding>
+            <element signature="e#22#228#0#PHP" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/login/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>

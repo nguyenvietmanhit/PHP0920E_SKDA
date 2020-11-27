@@ -1,16 +1,17 @@
 <?php
 session_start();
-//logout.php
-//XỬ LÝ ĐĂNG XUẤT USER KHỎI HỆ THỐNG
-//xử lý xóa hết tất các session liên quan khi user login vào
-//hệ thống
-unset($_SESSION['success']);
+/**
+ * logout.php
+ * Xử lý đăng xuất user
+ * + Xử lý xóa hết các session đã tạo khi đăng nhập thành công
+ */
 unset($_SESSION['username']);
+unset($_SESSION['success']);
 $_SESSION['success'] = 'Đăng xuất thành công';
-//xóa các cookie liên quan đến username và password
-setcookie('username', '', time() - 1);
-setcookie('password', '', time() - 1);
+// + Xóa cookie liên quan đến username và password đã lưu cho
+//chức năng Ghi nhớ đăng nhập
+setcookie('username', 'dsadsa', time() - 1);
+setcookie('password', 'sadsasda', time() - 1);
 
-//có thể sử dụng thêm hàm session_destroy()
-header('Location: login.php');
+header('Location: form_login.php');
 exit();
