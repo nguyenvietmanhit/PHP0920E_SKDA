@@ -15,6 +15,17 @@ if (isset($_SESSION['username'])) {
   header('Location: welcome.php');
   exit();
 }
+// Nếu tồn tại cookie username/password -> chuyển hướng
+//về trang welcome
+if (isset($_COOKIE['username'])
+    && isset($_COOKIE['password'])) {
+    //Tạo session tương ứng với trường hợp đăng nhập
+    //thành công
+    $_SESSION['username'] = $_COOKIE['username'];
+    $_SESSION['success'] = 'Tự động login thành công';
+    header('Location: welcome.php');
+    exit();
+}
 
 //XỬ LÝ FORM LOGIN
 // + Debug $_POST
@@ -45,9 +56,20 @@ if (isset($_POST['submit'])) {
     // + Username, password đều có ít nhất 3 ký tự: strlen
     // Sau khi login thành công, chuyển hướng sang file
     //welcome.php, hiển thị message tại file đó
-    if (strlen($username) >= 3 && strlen($password) >= 3) {
+    if (strlen($username) >= 3
+        && strlen($password) >= 3) {
+        // - Ktra có tích vào checkbox Ghi nhớ đăng nhập
+        // hay ko
+        if (isset($_POST['remember'])) {
+            // Lưu cookie username và password
+          setcookie('username', $username,
+              time() + 3600);
+          // Mật khẩu luôn phải dc mã hóa trước khi lưu
+          setcookie('password', $password,
+              time() + 3600);
+        }
 //      $result = 'Đăng nhập thành công';
-//      Do giá trị đc sinh ra ở file hiện tại, nhưng lại
+//      - Do giá trị đc sinh ra ở file hiện tại, nhưng lại
       // dc sử dụng ở 1 file khác, nên sẽ dùng biến
       //dạng session để lưu
       $_SESSION['success'] = 'Đăng nhập thành công';
@@ -68,6 +90,14 @@ if (isset($_SESSION['error'])) {
   echo $_SESSION['error'];
   //Sau khi hiển thị -> xóa
   unset($_SESSION['error']);
+}
+?>
+<?php
+//Hiển thị session success
+if (isset($_SESSION['success'])) {
+  echo $_SESSION['success'];
+  //Sau khi hiển thị -> xóa
+  unset($_SESSION['success']);
 }
 ?>
 <!--- Hiển thị lỗi ra màn hình-->
