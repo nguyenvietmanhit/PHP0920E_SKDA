@@ -77,5 +77,76 @@ USE php0929e_demo;
 #VD hợp lệ: 2020-11-30 21:13:30
 #VD ko hợp lê: 30-11-2020 21:13:30, 2020/11/30 21:13:30
 
+ * #Tạo CSDL: php0920e_query
+CREATE DATABASE IF NOT EXISTS php0920e_query
+CHARACTER SET utf8 COLLATE utf8_general_ci;
+# Tạo 2 bảng: tên bảng ở dạng số nhiều, khóa chính nên đặt là id, khóa ngoại đặt <tên-bảng-liên-kết-số-it>_id. VD:category_id, viết thường hết, tiếng anh
+# categories: lưu thông tin các danh mục
+# products: lưu thông tin các sản phẩm
+# + Bảng categories:
+# id: khóa chính, INT(11), AUTO_INCREMENT
+# name: tên danh mục, VARCHAR(150)
+# created_at: ngày tạo danh mục, TIMESTAMP, DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE categories(
+id INT(11) AUTO_INCREMENT,
+name VARCHAR(150) DEFAULT NULL,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+# sau khi liệt kê hết các trường thì mới set khóa chính, khóa ngoại
+PRIMARY KEY (id)
+);
+
+# Bảng products:
+# + id: khóa chính, INT(11), AUTO_INCREMENT
+# + category_id: khóa ngoại, liên kết với bảng categories,
+# INT(11)
+# + name: tên sản phẩm, VARCHAR(200)
+# + price: giá, INT(11)
+# + created_at: ngày tạo, TIMESTAMP, CURRENT_TIMESTAMP
+CREATE TABLE products(
+id INT(11) AUTO_INCREMENT,
+category_id INT(11),
+name VARCHAR(150),
+price INT(11) DEFAULT 0,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY (id),
+FOREIGN KEY (category_id) REFERENCES categories(id)
+);
+# - Join bảng: demo cả 3 cơ chế: inner, left, right
+# INNER JOIN: đảm bảo sự chặt chẽ về mặt dữ liệu, cả 2 bảng phải cùng có ữ liệu thì mới lấy
+# Chú ý: khi join bảng, cần sử dụng tên bảng trước tên trường khi muốn lấy ra trường đó
+# Đi qua từng bản ghi của bảng gốc, mang bản ghi đó vào bảng sẽ join để tìm xem có bản ghi tương ứng nào ko, nếu có thì trả về đc dữ liệu, ngược lại ko trả về dữ liệu
+SELECT categories.*, products.* FROM categories
+INNER JOIN products
+ON products.category_id = categories.id;
+# LEFT JOIN
+# KHác biết với INNER là vẫn trả về dữ liệu ngay cả khi bảng liên quan ko có bản ghi tương ứng, là kiểu join ko đảm bảo chặt chẽ về dữ liệu
+SELECT categories.*, products.* FROM categories
+LEFT JOIN products
+ON products.category_id = categories.id;
+# RIGHT JOIN
+# Giống LEFT nhưng lấy bảng liên quan làm bảng gốc để so sánh (products)
+SELECT categories.*, products.* FROM categories
+RIGHT JOIN products
+ON products.category_id = categories.id;
+
+# - Từ khóa IN: thay thế cho nhiều điều kiện OR
+#VD: lấy danh mục có id = 1 hoặc id = 2 hoặc id = 3
+SELECT * FROM categories WHERE id = 1 OR id = 2 OR id = 3;
+SELECT * FROM categories WHERE id IN (1, 2, 3);
+# - BETWEEN: thay thế >= AND <=
+#VD:lấy danh mục có id >= 2 và id <= 5
+SELECT * FROM categories WHERE id >= 2 AND id <= 5;
+SELECT * FROM categories WHERE id BETWEEN 2 AND 5;
+# - Hàm COUNT, đếm số lượng bản ghi theo trường nào đó
+# vd: tính tổng số bản ghi của bảng categories
+SELECT COUNT(id) FROM categories;
+# Sử dụng từ khóa AS để đổi tên trường
+SELECT COUNT(id) AS count_id FROM categories;
+# - Hàm MAX, MIN, AVG, SUM
+# - Từ khóa GROUP BY: nhóm các giá trị theo trường, để tính toán trên nó
+# VD: Đếm xem mỗi danh mục đang có bao nhiêu sản phẩm
+SELECT category_id, COUNT(id) FROM products
+GROUP BY category_id;
+
 
  */
