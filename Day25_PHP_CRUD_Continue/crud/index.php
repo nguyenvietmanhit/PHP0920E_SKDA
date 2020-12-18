@@ -17,6 +17,13 @@ if (isset($_SESSION['success'])) {
   //Session dạng flash
   unset($_SESSION['success']);
 }
+// + crud/index.php: Hiển thị session dạng error
+if (isset($_SESSION['error'])) {
+  echo $_SESSION['error'];
+  //Session dạng flash
+  unset($_SESSION['error']);
+}
+
 // Lấy dữ liệu từ bảng products để đổ ra table
 // + Tạo câu truy vấn: lấy danh sách theo thứ tự mới nhất
 $sql_select_all = "SELECT * FROM products 
