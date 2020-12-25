@@ -1,253 +1,254 @@
-<h1>Demo Lập trình hướng đối tượng</h1>
 <?php
-//1 - Class
-    class Book {
-        //thuộc tính của class
-        public $name;
-        public $type;
-
-//        2 phương thức của class
-        public function canRead() {
-            echo 'Phương thức can read';
-        }
-
-        public function sell() {
-            echo 'Phương thức sell';
-        }
-    }
-
-//    2 - Đối tượng - Object
-    //đối tượng sẽ có tất cả thuộc tính và phương thức
-    //của class
-    $sgk = new Book();
-    $sgk->name = 'Sách giáo khoa';
-    $sgk->type = 'Sách';
-    //set giá trị cho thuộc tính name và type của đối tượng
-    echo $sgk->name; //Sách giáo khoa
-    echo $sgk->type; // Sách
-    //gọi phương thức
-    $sgk->canRead();
-    $sgk->sell();
-
-    class Car {
-        public $producer; //nhà sản xuất
-        public $brand; //thương hiệu
-        public $color; //màu xe
-        public $card; //biển số
-
-        public function go() {
-
-        }
-    }
-    //khởi tạo đối tượng từ class Car
-    $car = new Car();
-    //set các giá trị cho các thuộc tính của đối tượng vừa khởi tạo
-    $car->producer = 'Toyota';
-    $car->brand = 'Toyota';
-    $car->color = 'Yellow';
-    $car->card = 123456;
-    echo "<pre>";
-    print_r($car);
-    echo "</pre>";
-    $car->go();
-
-//    3 - Từ khóa this
-//truy cập thuộc tính hoặc phương thức trong chính class hiện tại
-    class StudentDemo {
-        public $name;
-
-        public function getName() {
-            echo "Name: " . $this->name;
-        }
-    }
-
-    $student = new StudentDemo();
-    $student->name = 'ABC';
-    $student->getName(); //Name: ABC
-
-//4  - Phạm vi truy cập thuộc tính/phương thức
-//có 3 mức độ:
-//private:
-    class TestPrivate {
-        private $name;
-
-        private function show() {
-            echo "Phương thức show";
-        }
-
-        private function getName() {
-            //truy cập private bình thường trong nội bộ class
-            $this->name = "ABC";
-        }
-    }
-
-    $test_private = new TestPrivate();
-    //cố tính truy cập thuộc tính name đang
-    //  ở chế độ private sẽ báo lỗi
-//    $test_private->name = 'Name 1';
-//    echo $test_private->name;
-//cố tính truy cập phương thức show đang
-//  ở chế độ private sẽ báo lỗi
-//    $test_private->show();
-
-//protected
-class TestProtected {
-    protected $name;
-    private $age;
-    protected function show() {
-        echo 'Phương thức show';
-    }
+/**
+ * demo_oop.php
+ * Lập trình hướng đối tượng - Object Oriented Programming
+ * 1 - Các phương pháp lập trình truyền thống
+ * + Lập trình tuyến tính: nghĩ gì viết nấy
+ */
+// Tính tổng 2 số và hiển thị kết quả
+$number1 = 5;
+$number2 = 6;
+$sum = $number1 + $number2;
+echo $sum;
+// 2 - Lập trình có cấu trúc: biết cách viết hàm
+function sum($number1, $number2) {
+  return $number1 + $number2;
 }
-//bên ngoài class cũng không thể truy cập đc thuộc tính/phương thức
-//đang ở chế độ protected
-$test_protected = new TestProtected();
-//$test_protected->name = 'ABCDEF';
+// Gọi hàm ..
+// 3 - Lập trình hướng đối tượng
+// + Gần gũi với thực tế , lấy đối tượng làm trung tâm để phân
+//tích
+// + Học PHP bắt buộc phải biết về OOP
+// + PHP có mô hình MVC, dựa trên mô hình này để tạo ra website
+// MVC đc viết dựa trên OOP
+// + OOP khá khó vì nhiều thuật ngữ
+// 4 - Các thuật ngữ cơ bản của lập trình hướng đối tượng
+// + Class: khuôn mẫu của các đối tượng. VD: bản thiết kế 1 ngôi
+//nhà chính là 1 Class, và các ngôi nhà đc xây từ bản vẽ này
+//chính là các Object - đối tượng của class đó
+// Tên class viết hoa các ký tự đầu tiên cuả mỗi tự
+class HomeClass {
 
-class ChildProtected extends TestProtected {
-    public function child() {
-        $this->name = 'ABC';
-        //báo lỗi
-//        $this->age = 12;
-    }
 }
 
-//public
-class TestPublic {
-    public $name;
-    public $age;
+class Person {
 
-    public function getName() {
-        echo "getName";
-    }
-
-    public function getAge() {
-        echo "getAge";
-    }
 }
-//thông thường khi làm project thì sẽ để phạm vi truy cập là public hết
-//để đơn giản
-$test_public = new TestPublic();
-$test_public->name = "12345";
-$test_public->age = 345;
-$test_public->getName();
-$test_public->getAge();
 
-//5  - THuộc tính của class
-class Animal {
-    //2 thuộc tính của class, về bản chất vẫn là biến thông thường
-    //do đang liên kết với object nên gọi là thuộc tính
-    public $name;
-    public $color;
-    public $age;
+// + Object: đối tượng, thực tế đối tượng có trạng thái và hành
+//vi, còn về mặt lập trình thuộc tính và phương thức
+// Đối tượng đc khởi tạo từ 1 class
+class Book1 {
+  // Khai báo 2 thuộc tính của class
+  public $name;
+  public $price;
+  //Khai báo 1 phương thức thêm sách
+  public function addBook() {
+    echo "addBook";
+  }
 }
-$animal = new Animal();
-//truy cập thuộc tính của class sử dụng cú pháp là ->
-$animal->name = "Mèo";
-$animal->color = "Trắng";
+// Khởi tạo các đối tượng từ class Book1, dùng từ khóa new
+$book1 = new Book1();
+// Sau khi tạo dối tượng, có thể truy cập đc thuộc tính/phương
+//thức của class đó, sử dụng cú pháp: ->
+$book1->name = 'Sách văn học';
+$book1->price = 100;
+$book1->addBook();
 
-//6 - Phương thức của class
-class Student2 {
-    public function addStudent() {
-        echo "addStudent";
-    }
+// Tạo thêm 1 đối tượng từ class trên
+$book2 = new Book1();
+$book2->name = 'Book 2';
+$book2->price = 200;
+$book2->addBook();
 
-    public function editStudent($id) {
-        echo "editStudent";
-    }
+// + Thuộc tính của lớp: về bản chất chính là các biến, nhưng
+//đc gắn thêm phạm vi truy cập phía trước khai báo:
+class Student {
+  // Khai báo các thuộc tính
+  public $name;
+  public $age;
+  public $id;
+  public $birthday;
 }
-$student = new Student2();
-//về bản chất phương thức trong class chính là các hàm
-//để truy cập các phương thức sử dụng ký tự ->
-$student->addStudent();//addStudent
-$student->editStudent(123); //editStudent
 
-//7  - Phương thức khởi tạo của class
-//là phương thức tự động chạy đầu tiên khi 1 đối tượng của class
-//được sinh ra
+// + Phương thức của lớp: chính là các hàm của PHP, đc gắn
+//thêm phạm vi truy cập phía trước khai báo
+class Product {
+  public function addProduct(){
+    echo "addProduct";
+  }
+  public function editProduct($id) {
+    echo "editProduct $id";
+  }
+  public function deleteProduct($id) {
+    echo "deleteProduct $id";
+  }
+  public function listProduct() {
+    echo "listProduct";
+  }
+}
+$product = new Product();
+$product->addProduct();
+$product->editProduct(5);
+$product->deleteProduct(8);
+$product->listProduct();
+
+// + Phương thức khởi tạo:
+// Dc dùng để khởi tạo giá trị mặc đinh
+//cho chính thuộc tính của class đó
+// Phương thức này đc gọi ngầm đầu tiên khi 1 đối tượng đc
+// khởi tạo từ class của nó
 class TestConstructor {
-    public function __construct() {
-        echo "<p>Phương thức khởi tạo sẽ 
-        chạy đầu tiên khi đối tượng được sinh ra</p>";
-    }
+  public $name;
+  //Cú pháp khai báo cố định của phương thức khởi tạo
+  public function __construct($name_param) {
+    echo "construct";
+    $this->name = $name_param;
+  }
+  public function test() {
+    echo "test";
+  }
 }
-$test_constructor = new TestConstructor();
-//8 - Từ khóa static
+// Do phương thức khởi tao có tham số nên lúc khởi tạo đối
+//tượng cũng phải truyền giá trị vào
+$test = new TestConstructor('Mạnh 123');
+$test->test(); //test
+echo $test->name; // Mạnh 123
+
+// + Từ khóa this: chính là đối tượng hiện tại
+class TestThis {
+  public $name;
+  public $age;
+  public function show() {
+    echo $this->name;
+  }
+}
+// Việc dùng $this bên trong class giống hệt như dùng đối tương
+//của class đó
+$obj = new TestThis();
+$obj->name = '123';
+$obj->show(); //123
+
+// + Phạm vi truy cập: private, protected, public
+// Private: chỉ nội bộ class truy cập đc, các class kế thừa
+//hoặc ngay cả đối tượng sinh ra từ class đó cũng ko truy cập đc
+class TestPrivate {
+  private $name;
+  public $age;
+  private function hide() {
+    echo "Hide";
+    //Bên trong class truy cập private bình thường
+    $this->name = 'bac';
+  }
+  public function show() {
+    echo "Show";
+  }
+}
+$obj = new TestPrivate();
+//Không thể truy cập đc private từ bên ngoài
+//$obj->name = '123';
+//$obj->hide();
+// Protected: ngoài nội bộ class, class con kế thừa từ class cha
+// cũng có thể truy cập, đối tượng khởi tạo class đó vẫn ko
+//truy cập dc
+class TestProtected {
+  protected $address;
+
+  protected function add() {
+    $this->address = 'àdsfsdfsd';
+  }
+}
+// Tính kế thừa: extends, 1 class kế thừa từ class cha có thể
+//truy cập đc tất cả phương thức/thuộc tính của class cha
+//mà có phạm vi truy cập là protected/public
+class Children extends TestProtected {
+  public function testChildren() {
+    $this->address = 'abc';
+    $this->add();
+  }
+}
+$children = new Children();
+$children->testChildren();
+// PHP chỉ hỗ trợ đơn kế thừa, 1 class chỉ kế thừa đc 1 class
+//khác tại 1 thời điểm
+// - Public: có thể truy cập đc bất cứ nơi đâu
+// Để đơn giản, demo luôn dùng public
+
+// + Từ khóa static: truy cập thuộc tính/phương thức static mà
+// ko cần khởi tạo đối tượng, ->, ::
 class TestStatic {
-    public static $name;
+  // KHai báo hằng trong 1 class
+  const PI = 3.14;
+  public static $title;
 
-    //nếu trong phương thức mà có truy cập đến thuộc tính static
-    //thì bắt buộc phương thức đó cũng phải là static
-    public static function getName() {
-//        TestStatic::$name = "ABC";
-        //từ khóa self đại diện cho class đó
-        //tương đương với từ khóa this
-        self::$name = "ABC";
-        echo self::$name;
-    }
+  public static function showTitle() {
+    echo "showTitle";
+//    TestStatic::$title = 'abc';
+    //nội bộ class ->self thay cho tên class
+    self::$title = 'abc';
+  }
 }
-//không thể truy cập thuộc tính/phương thức đang ở trạng thái static
-//từ việc khởi tạo đối tượng
-$test_static = new TestStatic();
-//$test_static->name;
-//truy cập thuộc tính/phương thức tĩnh bằng cách dùng
-//Tên_Class::tên_thuộc_tính/tên_phương_thức
-TestStatic::$name = "ABCDe";
-TestStatic::getName();//ABC
-
-// 9 - Từ khóa extends - Kế thừa
-class Person1 {
-    public $name;
-    public $age;
-
-    public function getName() {
-        echo 'getNAme';
-    }
+//Cú pháp truy cập static: <tên-class>::<tên TT/PT>
+TestStatic::$title = 'New tittle';
+TestStatic::showTitle(); //showTitle
+// cú pháp truy cập hằng trong class giống hệt static
+echo TestStatic::PI; //3.14
+// + Từ khóa extends: dùng cho kế thừa
+// + Từ khóa abstract: tính trừu tượng trong OOP, dùng cho mục
+//đích kế thừa
+abstract class PersonAbs {
+  public $name;
+  public function show() {
+    echo "show";
+  }
+  //Class Abstract đặc trưng bởi các phương thức abstract,
+  //là phương thức ko có nội dung gì cả
+  abstract public function testAbs();
 }
-//class kế thừa sẽ có tất cả các thuộc tính và phương thức của class cha
-//mà đang có phạm vi truy cập là protected và public
-class Student1 extends Person1 {
-    public $class;
-    public function showID() {}
+//Tạo class con kế thừa từ class abstract trên
+class A extends PersonAbs {
+
+  //Bắt buộc phải override các phương thức trừu tượng
+  public function testAbs() {
+    echo "testabs1";
+  }
 }
-$student = new Student1();
-$student->name = "MẠnh";
-$student->age = 30;
-$student->getName();
-
-//10 - Từ khóa abstract - Tính trừu tượng
-abstract class Person2 {
-    public $name;
-
-    public function getName() {
-
-    }
-    //phương thức trừu tượng khai báo ko có nội dung\
-    //bắt buộc các class khi extends phải ghi đè lại phương thức này
-    abstract public function test();
-}
-
-class TestPerson2 extends Person2 {
-    public function test() {
-        //code
-    }
-}
-
-//11 - Từ khóa implement - Interface
+// + Từ khóa implement: triển khai các interface
 interface Config {
-//    public $name;
-    public function sendMail();
-    public function test();
+  //Interface ko thể khai báo đc thuộc tính
+//  public $name;
+// Phương thức trong interface bắt buộc là public, ko phương
+//thức nào đc có nội dung
+  public function sendMail();
+  public function getMail();
+//  public function check() {
+//    echo "abc";
+//  };
+}
+interface Mail {
+  public function configMail();
+}
+//1 class có thể triển khai nhiều interface
+class B implements Config, Mail {
+
+  public function test()
+  {
+    // TODO: Implement test() method.
+  }
+
+  public function configMail()
+  {
+    // TODO: Implement configMail() method.
+  }
+
+  public function sendMail()
+  {
+    // TODO: Implement sendMail() method.
+  }
+
+  public function getMail()
+  {
+    // TODO: Implement getMail() method.
+  }
 }
 
-class Mail implements Config {
-    public function sendMail()
-    {
-        // TODO: Implement sendMail() method.
-    }
-
-    public function test()
-    {
-        // TODO: Implement test() method.
-    }
-}
-?>
