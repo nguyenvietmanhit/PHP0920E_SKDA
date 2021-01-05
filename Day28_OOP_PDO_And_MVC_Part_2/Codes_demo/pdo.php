@@ -78,3 +78,43 @@ $obj_delete = $connection->prepare($sql_delete);
 // + Thực thi đối tượng truy vấn
 $is_delete = $obj_delete->execute();
 var_dump($is_delete);
+
+// 4 - Truy vấn SELECT
+// + Lấy ra nhiều bản ghi:
+// CSDL: php0920e_oop, bảng: books: id, name, amount
+// VD: lấy ra tất cả bản ghi trong bảng books theo thứ
+//tự giảm dần của số lượng
+// - Viết câu truy vấn:
+$sql_select_all = "SELECT * FROM books ORDER BY
+ amount DESC";
+// - Chuẩn bị đối tượng truy vấn: prepare
+$obj_select_all = $connection->prepare($sql_select_all);
+// - Tạo mảng truyền giá trị cho tham số trong câu truy
+// vấn -> bỏ qua do câu truy vấn trên ko có tham số
+// - Thực thi đối tượng truy vấn: execute, với truy vấn
+//SELECT ko cần thao tác với kết quả trả về sau khi
+//execute như INSERT/UPDATE/DELETE
+$obj_select_all->execute();
+// - Trả về mảng kết hợp từ đối tượng truy vấn trên
+$books = $obj_select_all
+    ->fetchAll(PDO::FETCH_ASSOC);
+echo "<pre>";
+print_r($books);
+echo "</pre>";
+//mysqli_fetch_all()
+// + Lấy 1 bản ghi duy nhất:
+// VD: LẤy bản ghi có id = 1
+// - Viết truy vấn
+$sql_select_one = "SELECT * FROM books WHERE id = 1";
+// - Cbi đối tượng truy vấn
+$obj_select_one = $connection->prepare($sql_select_one);
+// - Tạo mảng truyền giá trị cho tham số trong câu truy
+//vấn nếu có , do ko có -> bỏ qua
+// - Thực thi obj truy vấn trên
+$obj_select_one->execute();
+// - Lấy mảng kết hợp 1 chiều từ obj truy vấn trên
+$book = $obj_select_one->fetch(PDO::FETCH_ASSOC);
+echo "<pre>";
+print_r($book);
+echo "</pre>";
+
