@@ -1,0 +1,12 @@
+/*assets/css/style.css*/
+.header {
+    background: red;
+    color: #fff;
+}
+.main {
+    border: 1px solid #000;
+}
+.footer {
+    background: blue;
+    color: #fff;
+}
