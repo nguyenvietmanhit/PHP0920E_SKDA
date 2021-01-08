@@ -61,4 +61,5 @@ if (!method_exists($obj, $action)) {
 }
 // Url: index.php?controller=product&action=create
 $obj->$action();
+//index.php?controller=product&action=create
 
