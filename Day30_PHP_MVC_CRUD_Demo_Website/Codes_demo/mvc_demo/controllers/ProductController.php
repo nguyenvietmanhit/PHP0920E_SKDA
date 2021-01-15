@@ -82,7 +82,15 @@ class ProductController extends Controller {
         
         $product_model->avatar = $avatar;
         $is_insert = $product_model->insert();
-        var_dump($is_insert);
+//        var_dump($is_insert);
+        if ($is_insert) {
+          $_SESSION['success'] = 'Thêm mới sp thành công';
+          header
+('Location: index.php?controller=product&action=index');
+          exit();
+        } else {
+          $this->error = 'Thêm sp thất bại';
+        }
       }
     }
 
@@ -102,6 +110,51 @@ class ProductController extends Controller {
   // Hiển thị ds sp
   //index.php?controller=product
   public function index() {
-    echo "Hàm index";
+//    echo "Hàm index";
+    // Gọi model lấy tất cả bản ghi đang có
+    $product_model = new Product();
+    $products = $product_model->getAll();
+    // Tạo mảng dể truyền ra view 1 cách tường minh
+    $arr_view = [
+      // Key là tên biến sẽ dùng ở view
+      // Value là giá trị của biến sẽ truyền ra view
+      'products' => $products
+    ];
+    // - Lấy nội dung view tương ứng
+    $this->content =
+    $this->render('views/products/index.php',
+        $arr_view);
+    // - Gọi layout để hiển thị view vừa lấy đc
+    require_once 'views/layouts/main.php';
+  }
+
+  //Xem chi tiết sp
+  public function detail() {
+    echo "<pre>";
+    print_r($_GET);
+    echo "</pre>";
+    // Validate tham số id
+    if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
+      $_SESSION['error'] = 'Id ko hợp lệ';
+    header('Location: index.php?controller=product');
+    exit();
+    }
+    $id = $_GET['id'];
+    // Gọi model để lấy bản ghi tương ứng dựa theo id
+    $product_model = new Product();
+    $product = $product_model->getOne($id);
+//    echo "<pre>";
+//    print_r($product);
+//    echo "</pre>";
+    // Tạo mảng để truyền biến ra view
+    $arr_view = [
+        'product' => $product
+    ];
+    // LẤy nội dung view detail
+    $this->content =
+  $this->render('views/products/detail.php',
+      $arr_view);
+    // Gọi layout hiển thị nội dung view vừa lấy đc
+    require_once 'views/layouts/main.php';
   }
 }
