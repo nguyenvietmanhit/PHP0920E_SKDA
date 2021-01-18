@@ -19,7 +19,7 @@
     <session id="206876991">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="26" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.10" value="2" />
@@ -42,7 +42,7 @@
         <counts>
           <entry key="css" value="2" />
           <entry key="htaccess" value="1" />
-          <entry key="html" value="19" />
+          <entry key="html" value="20" />
           <entry key="js" value="1" />
           <entry key="php" value="73" />
           <entry key="sql" value="1" />
@@ -52,7 +52,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="19" />
+          <entry key="HTML" value="20" />
           <entry key="JavaScript" value="1" />
           <entry key="PHP" value="73" />
           <entry key="PLAIN_TEXT" value="1" />
@@ -64,7 +64,7 @@
         <counts>
           <entry key="css" value="118" />
           <entry key="html" value="899" />
-          <entry key="php" value="100935" />
+          <entry key="php" value="101126" />
           <entry key="txt" value="42" />
         </counts>
       </usages-collector>
@@ -72,7 +72,7 @@
         <counts>
           <entry key="CSS" value="118" />
           <entry key="HTML" value="905" />
-          <entry key="PHP" value="100900" />
+          <entry key="PHP" value="101091" />
           <entry key="PLAIN_TEXT" value="42" />
           <entry key="SQL" value="29" />
         </counts>
@@ -81,15 +81,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day30_PHP_MVC_CRUD_Demo_Website/mockup_html/frontend/profile.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day30_PHP_MVC_CRUD_Demo_Website/mockup_html/frontend/template_mail_order.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -111,19 +102,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/build_website_from_scratch.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="102" column="34" selection-start-line="102" selection-start-column="34" selection-end-line="102" selection-end-column="34" />
+              <caret line="105" column="44" selection-start-line="105" selection-start-column="44" selection-end-line="105" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/file_create_db.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/frontend/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
+            <state relative-caret-position="94">
               <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
             </state>
           </provider>
@@ -378,18 +378,18 @@
       <workItem from="1610104935506" duration="10880000" />
       <workItem from="1610365968625" duration="7946000" />
       <workItem from="1610536936448" duration="481000" />
-      <workItem from="1610710749326" duration="8738000" />
+      <workItem from="1610710749326" duration="8960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160344000" />
+    <option name="totallyTimeSpent" value="160566000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21482602" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -418,13 +418,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Day16_PHP_Include_Require_Operator_Condition_Loop/Code_demo_tren_lop/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Day27_OOP_PDO_And_MVC/Codes_demo/pdo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
@@ -716,17 +709,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/build_website_from_scratch.php">
+    <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/frontend/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="102" column="34" selection-start-line="102" selection-start-column="34" selection-end-line="102" selection-end-column="34" />
+        <state relative-caret-position="94">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/frontend/profile.html">
+    <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/file_create_db.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        <state relative-caret-position="329">
+          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/build_website_from_scratch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="105" column="44" selection-start-line="105" selection-start-column="44" selection-end-line="105" selection-end-column="44" />
         </state>
       </provider>
     </entry>
