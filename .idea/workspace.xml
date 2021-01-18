@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57356519-5be0-4a78-83fa-780444bfbd3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day30_PHP_MVC_CRUD_Demo_Website/Codes_demo/mvc_demo/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_PHP_MVC_CRUD_Demo_Website/Codes_demo/mvc_demo/controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day30_PHP_MVC_CRUD_Demo_Website/Codes_demo/mvc_demo/models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_PHP_MVC_CRUD_Demo_Website/Codes_demo/mvc_demo/models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day30_PHP_MVC_CRUD_Demo_Website/Codes_demo/mvc_demo/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_PHP_MVC_CRUD_Demo_Website/Codes_demo/mvc_demo/views/layouts/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day30_PHP_MVC_CRUD_Demo_Website/Codes_demo/mvc_demo/views/products/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_PHP_MVC_CRUD_Demo_Website/Codes_demo/mvc_demo/views/products/detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day30_PHP_MVC_CRUD_Demo_Website/Codes_demo/mvc_demo/views/products/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_PHP_MVC_CRUD_Demo_Website/Codes_demo/mvc_demo/views/products/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/build_website_from_scratch.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/build_website_from_scratch.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,18 +28,19 @@
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="5" />
+          <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.opened" value="29" />
+          <entry key="project.opened" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="2" />
-          <entry key="htaccess" value="1" />
-          <entry key="html" value="20" />
-          <entry key="js" value="1" />
-          <entry key="php" value="73" />
+          <entry key="htaccess" value="2" />
+          <entry key="html" value="22" />
+          <entry key="js" value="2" />
+          <entry key="php" value="92" />
           <entry key="sql" value="1" />
           <entry key="txt" value="1" />
         </counts>
@@ -52,19 +48,19 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="20" />
-          <entry key="JavaScript" value="1" />
-          <entry key="PHP" value="73" />
+          <entry key="HTML" value="22" />
+          <entry key="JavaScript" value="2" />
+          <entry key="PHP" value="92" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SQL" value="1" />
-          <entry key="htaccess" value="1" />
+          <entry key="htaccess" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="118" />
           <entry key="html" value="899" />
-          <entry key="php" value="101126" />
+          <entry key="php" value="106232" />
           <entry key="txt" value="42" />
         </counts>
       </usages-collector>
@@ -72,7 +68,7 @@
         <counts>
           <entry key="CSS" value="118" />
           <entry key="HTML" value="905" />
-          <entry key="PHP" value="101091" />
+          <entry key="PHP" value="106197" />
           <entry key="PLAIN_TEXT" value="42" />
           <entry key="SQL" value="29" />
         </counts>
@@ -81,91 +77,98 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day30_PHP_MVC_CRUD_Demo_Website/mockup_html/frontend/template_mail_order.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/send_mail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+            <state relative-caret-position="314">
+              <caret line="161" column="22" lean-forward="true" selection-start-line="161" selection-start-column="22" selection-end-line="161" selection-end-column="22" />
               <folding>
-                <element signature="e#693#727#0#PHP" expanded="true" />
+                <element signature="e#6#39#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/build_website_from_scratch.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mockup_html/backend/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="105" column="44" selection-start-line="105" selection-start-column="44" selection-end-line="105" selection-end-column="44" />
+            <state>
+              <caret selection-end-line="167" selection-end-column="7" />
+              <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" />
+                <element signature="n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/file_create_db.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/frontend/profile.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/frontend/payment.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/frontend/product_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/backend/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/backend/login.html">
+        <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/assets/js/jquery.min.js">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/frontend/index.html">
+        <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/configs/Database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/models/Model.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="282">
-              <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/models/Category.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="422">
+              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/controllers/Controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/controllers/CategoryController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/views/categories/create.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="e#6#44#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -193,15 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/test.txt" />
-        <option value="$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/read_write_file.php" />
-        <option value="$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/session.php" />
-        <option value="$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/test_session.php" />
-        <option value="$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/cookie.php" />
-        <option value="$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/login/welcome.php" />
-        <option value="$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/login/form_login.php" />
-        <option value="$PROJECT_DIR$/Day20_PHP_Session_Cookie/Codes_demo/login/logout.php" />
-        <option value="$PROJECT_DIR$/Day21_PHP_MySQL_Database/Codes_demo/login/form_login.php" />
         <option value="$PROJECT_DIR$/Day21_PHP_MySQL_Database/Codes_demo/login/logout.php" />
         <option value="$PROJECT_DIR$/Day21_PHP_MySQL_Database/Codes_demo/mysql.php" />
         <option value="$PROJECT_DIR$/Day22_PHP_Connect_MySQL/Codes_demo/mysql.php" />
@@ -244,6 +238,15 @@
         <option value="$PROJECT_DIR$/Day30_PHP_MVC_CRUD_Demo_Website/Codes_demo/mvc_demo/controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/send_mail.php" />
         <option value="$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/build_website_from_scratch.php" />
+        <option value="$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/build_website_from_scratch.php" />
+        <option value="$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/index.php" />
+        <option value="$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/configs/Database.php" />
+        <option value="$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/models/Model.php" />
+        <option value="$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/models/Category.php" />
+        <option value="$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/controllers/Controller.php" />
+        <option value="$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/controllers/CategoryController.php" />
+        <option value="$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/views/categories/create.php" />
+        <option value="$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/views/layouts/main.php" />
       </list>
     </option>
   </component>
@@ -275,6 +278,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -285,33 +289,105 @@
             <path>
               <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
               <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
-              <item name="Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
               <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
-              <item name="Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register" type="462c0819:PsiDirectoryNode" />
               <item name="mockup_html" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
               <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
-              <item name="Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register" type="462c0819:PsiDirectoryNode" />
               <item name="mockup_html" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
               <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
-              <item name="Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="mockup_html" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc_project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
+              <item name="Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc_project" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
+              <item name="Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc_project" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
+              <item name="Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc_project" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
+              <item name="Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc_project" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="configs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
+              <item name="Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc_project" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
+              <item name="Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc_project" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
+              <item name="Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc_project" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
+              <item name="Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc_project" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="categories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP0920E_SKDA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
+              <item name="Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc_project" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -324,6 +400,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PHP0920E_SKDA\Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register\mvc_project\backend" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\PHP0920E_SKDA\Day18_PHP_Form\Code_demo" />
     </key>
@@ -379,11 +458,12 @@
       <workItem from="1610365968625" duration="7946000" />
       <workItem from="1610536936448" duration="481000" />
       <workItem from="1610710749326" duration="8960000" />
+      <workItem from="1610968837883" duration="9571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160566000" />
+    <option name="totallyTimeSpent" value="170137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -418,74 +498,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Day27_OOP_PDO_And_MVC/Codes_demo/pdo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="76" column="20" lean-forward="true" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day28_OOP_PDO_And_MVC_Part_2/Codes_demo/pdo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="117" column="15" selection-start-line="117" selection-start-column="15" selection-end-line="117" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day28_OOP_PDO_And_MVC_Part_2/Codes_demo/mvc_demo/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day28_OOP_PDO_And_MVC_Part_2/Codes_demo/mvc_demo/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day28_OOP_PDO_And_MVC_Part_2/Codes_demo/mvc_demo/controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day28_OOP_PDO_And_MVC_Part_2/Codes_demo/mvc_demo/models/Product.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day28_OOP_PDO_And_MVC_Part_2/Codes_demo/mvc_demo/models/Model.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day28_OOP_PDO_And_MVC_Part_2/Codes_demo/mvc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2115">
-          <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day28_OOP_PDO_And_MVC_Part_2/Codes_demo/mvc_demo/.htaccess">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day28_OOP_PDO_And_MVC_Part_2/Codes_demo/mvc_demo/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2961">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day28_OOP_PDO_And_MVC_Part_2/Codes_demo/mvc_demo/views/products/detail.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day28_OOP_PDO_And_MVC_Part_2/Codes_demo/mvc_demo/views/products/update.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day28_OOP_PDO_And_MVC_Part_2/Codes_demo/mvc_demo/views/products/create.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day28_OOP_PDO_And_MVC_Part_2/Codes_demo/mvc_demo/views/products/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day28_OOP_PDO_And_MVC_Part_2/Codes_demo/mvc_demo/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day28_OOP_PDO_And_MVC_Part_2/Codes_demo/mvc_demo/controllers/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Day28_OOP_PDO_And_MVC_Part_2/Codes_demo/mvc_demo/configs/Database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -668,6 +680,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/send_mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1739">
+          <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/file_create_db.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4136">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/frontend/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/frontend/payment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/frontend/product_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/backend/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
@@ -681,52 +728,116 @@
     <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/frontend/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
-          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/send_mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
-          <folding>
-            <element signature="e#693#727#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/frontend/product_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/frontend/payment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/mockup_html/frontend/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/file_create_db.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Day31_PHP_Website_Part_1_Build_MVC_CKEditor_CKFinder/build_website_from_scratch.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="105" column="44" selection-start-line="105" selection-start-column="44" selection-end-line="105" selection-end-column="44" />
+        <state relative-caret-position="267">
+          <caret line="109" column="3" lean-forward="true" selection-start-line="109" selection-start-column="3" selection-end-line="109" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/file_create_db.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="11" column="2" lean-forward="true" selection-end-line="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/views/categories/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/views/categories/update.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/views/categories/detail.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/.htaccess">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/build_website_from_scratch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/configs/Database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/models/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/models/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/controllers/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/views/categories/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#6#44#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/assets/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mockup_html/backend/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="167" selection-end-column="7" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day32_PHP_Website_Part_2_Layout_CKEditor_CKFinder_Register/mvc_project/backend/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="161" column="22" lean-forward="true" selection-start-line="161" selection-start-column="22" selection-end-line="161" selection-end-column="22" />
+          <folding>
+            <element signature="e#6#39#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -107,4 +107,42 @@
  * tạo bảng
  * + Xây dựng cấu trúc file/thư mục cho project theo
  * MVC
+ *
+ * 3/ Tạo CSDL:
+CREATE DATABASE IF NOT EXISTS php0920e_project
+CHARACTER SET utf8 COLLATE utf8_general_ci;
+ * 4/ Tạo các bảng: copy nội dung file file_create_db.html
+ * ,chạy trên tab SQL của PHPMyAdmin
+ *
+ * 5/ Tạo cấu trúc thư mục cho project theo MVC đã học
+ * mvc_project
+             /backend: quản trị trang
+                     /assets/
+ *                          /css
+ *                          /js
+ *                          /images
+ *                          /webfonts
+ *                          /ckeditor: trình soạn thảo
+ *                          /ckfinder: trình upload ảnh
+ *                   /configs
+ *                          /Database.php
+ *                   /controllers
+ *                          /Controller.php
+ *                          /CategoryController.php
+ *                   /models
+ *                          /Model.php
+ *                          /Category.php
+ *                   /views/
+ *                         /layouts
+ *                                 /main.php
+ *                         /categories/
+ *                                    /index.php
+ *                                    /create.php
+ *                                    /update.php
+ *                                    /detail.php
+ *                  /index.php: file index gốc
+ *                  /.htaccess:
+ *           /frontend: user thực tế
+ *           cấu trúc file/thư mục giống hệt backend
+ * 6 / Code Backend trước
  */
