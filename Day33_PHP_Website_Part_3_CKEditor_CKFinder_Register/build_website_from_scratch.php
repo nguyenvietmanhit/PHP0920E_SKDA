@@ -145,4 +145,14 @@ CHARACTER SET utf8 COLLATE utf8_general_ci;
  *           /frontend: user thực tế
  *           cấu trúc file/thư mục giống hệt backend
  * 6 / Code Backend trước
+ * - Nhúng trình soạn thảo CKEditor
+ * - Nhúng trình upload ảnh CKFinder
+ * + Tạo file product_detail.php ngang hàng
+ * với thư mục mvc_demo của Day33
+ *
+ *
+ * - Công việc cần làm:
+ * + Chuẩn bị tên đề tài, cbi giao diện tĩnh frontend
+ * và backend
+ * + Cbi nhóm code, độc lập hoặc nhóm tối đa 3 người
  */
