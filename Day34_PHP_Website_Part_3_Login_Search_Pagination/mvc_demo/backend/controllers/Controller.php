@@ -8,7 +8,23 @@
 
 class Controller
 {
-    //chứa nội dung view
+    // Hàm khởi tạo, dùng để check user login hay chưa
+   // Mọi controller đều đang kế thừa từ controller này
+  // Cần check thêm trường hợp ko phải login / register,
+  // hay các chức năng ko cần login thì vẫn cho phép
+  // truy cập
+    public function __construct() {
+      if (!isset($_SESSION['user']) &&
+          $_GET['controller'] != 'user' &&
+          !in_array($_GET['action'], ['login', 'register', 'logout'])) {
+
+        $_SESSION['error'] = 'Bạn chưa đăng nhập';
+        header('Location: index.php?controller=user&action=login');
+        exit();
+      }
+    }
+
+  //chứa nội dung view
     public $content;
     //chứa nội dung lỗi validate
     public $error;

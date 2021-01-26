@@ -40,4 +40,23 @@ class User extends Model {
     $is_insert = $obj_insert->execute($inserts);
     return $is_insert;
   }
+
+  public function getUser($username, $password) {
+    // + Viết truy vấn có tham số
+    $sql_select_one = "SELECT * FROM users 
+WHERE username=:username AND password=:password";
+    // + Cbi obj truy vấn
+    $obj_select_one = $this->connection
+        ->prepare($sql_select_one);
+    // + Tạo mảng
+    $selects = [
+        ':username' => $username,
+        ':password' => $password
+    ];
+    // + Thực thi
+    $obj_select_one->execute($selects);
+    // + Trả về mảng kết hợp 1 chiều
+    $user = $obj_select_one->fetch(PDO::FETCH_ASSOC);
+    return $user;
+  }
 }
