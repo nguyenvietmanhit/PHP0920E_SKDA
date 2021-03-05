@@ -16,7 +16,8 @@ class Controller
     public function __construct() {
       if (!isset($_SESSION['user']) &&
           $_GET['controller'] != 'user' &&
-          !in_array($_GET['action'], ['login', 'register', 'logout'])) {
+          !in_array($_GET['action'],
+              ['login', 'register', 'logout'])) {
 
         $_SESSION['error'] = 'Bạn chưa đăng nhập';
         header('Location: index.php?controller=user&action=login');
