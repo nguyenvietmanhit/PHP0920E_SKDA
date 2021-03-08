@@ -51,3 +51,8 @@ và action tương ứng trong form dưới dạng ẩn-->
         </tr>
     <?php endforeach; ?>
 </table>
+<?php
+// views/categories/index.php
+// Hiển thị phân trang
+echo $data;
+?>

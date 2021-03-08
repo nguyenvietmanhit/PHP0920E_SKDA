@@ -124,6 +124,41 @@ class Pagination {
         }
       }
     }
+    // Trường hợp hiển thị 1 số trang nhất định
+    else {
+      // Gán lại biến
+      // index.php?controller=&action=&page=
+      $controller = $this->params['controller'];
+      $action = $this->params['action'];
+      for ($page = 1; $page <= $total_page; $page++) {
+        $current_page = $this->getCurrentPage();
+        if ($page == $current_page) {
+          $data .= "<li class='active'>";
+          $data .= "<a href='#'>Trang $page</a>";
+          $data .= "</li>";
+        }
+        // Các trang sẽ hiển thị bình thường là trang
+        //đầu tiên, trang cuối cùng, trang ngay trước
+        //và ngay sau trang hiện tại
+        elseif ($page == 1 || $page == $total_page
+        || $page == $current_page - 1
+        || $page == $current_page + 1) {
+          $url_page = "index.php?controller=$controller&action=$action&page=$page";
+          $data .= "<li>";
+          $data .= "<a href='$url_page'>Trang $page</a>";
+          $data .= "</li>";
+        }
+        // Các trang 2, 3, total_page - 1,
+        //total_page - 2 sẽ hiển thị dấu ...
+        elseif($page == 2 || $page == 3
+            || $page == $total_page - 1
+            || $page == $total_page - 2) {
+          $data .= "<li>";
+          $data .= "<a href='#'>...</a>";
+          $data .= "</li>";
+        }
+      }
+    }
     // Link phân trang cuối cùng luôn là Next
     $next_page = $this->getNextPage();
     $data .= $next_page;
