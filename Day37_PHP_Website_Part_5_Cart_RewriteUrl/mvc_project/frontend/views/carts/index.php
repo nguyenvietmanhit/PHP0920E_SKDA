@@ -12,63 +12,56 @@
                 <th></th>
             </tr>
 
+            <?php
+            // Khai báo tổng giá trị đơn hàng
+            $total_cart = 0;
+            foreach ($_SESSION['cart']
+            AS $product_id => $cart): ?>
             <tr>
                 <td>
                     <img class="product-avatar img-responsive"
-                         src="../backend/assets/uploads/1596790118-product-logo3.png" width="80">
+                         src="../backend/assets/uploads/<?php echo $cart['avatar'] ?>"
+                         width="80">
                     <div class="content-product">
-                        <a href="chi-tiet-san-pham/samsung-s9/5" class="content-product-a">
-                            dsadsa </a>
+                        <a href="chi-tiet-san-pham/samsung-s9/<?php echo $product_id?>"
+                           class="content-product-a">
+                            <?php echo $cart['title']; ?>
+                             </a>
                     </div>
                 </td>
                 <td>
-                    <!--                      cần khéo léo đặt name cho input số lượng, để khi xử lý submit form update lại giỏ hànTin nổi bậtg sẽ đơn giản hơn    -->
-                    <input type="number" min="0" name="3" class="product-amount form-control" value="4">
+                    <!--  cần khéo léo đặt name cho input số lượng, để khi xử lý submit form update lại giỏ hànTin nổi bậtg sẽ đơn giản hơn    -->
+                    <input type="number" min="0"
+                           name="<?php echo $product_id; ?>"
+                           class="product-amount form-control"
+                           value="<?php echo $cart['quantity']; ?>">
                 </td>
                 <td>
-                    11
+                    <?php echo number_format($cart['price']) ?>
                 </td>
                 <td>
-                    44
+                    <?php
+                    $total_item = $cart['price'] * $cart['quantity'];
+                    // Cộng dồn để lấy ra tổng giá trị đơn hàng
+                    $total_cart += $total_item;
+                    echo number_format($total_item);
+                    ?>
                 </td>
                 <td>
-                    <a class="content-product-a" href="xoa-san-pham/3.html">
+                    <a class="content-product-a"
+                       href="xoa-san-pham/<?php echo $product_id; ?>.html">
                         Xóa
                     </a>
                 </td>
             </tr>
-            <tr>
-                <td>
-                    <img class="product-avatar img-responsive"
-                         src="../backend/assets/uploads/1596790088-product-img.jpg" width="80">
-                    <div class="content-product">
-                        <a href="chi-tiet-san-pham/samsung-s9/5" class="content-product-a">
-                            SP 2 </a>
-                    </div>
-                </td>
-                <td>
-                    <!--                      cần khéo léo đặt name cho input số lượng, để khi xử lý submit form update lại giỏ hànTin nổi bậtg sẽ đơn giản hơn    -->
-                    <input type="number" min="0" name="2" class="product-amount form-control" value="2">
-                </td>
-                <td>
-                    1
-                </td>
-                <td>
-                    2
-                </td>
-                <td>
-                    <a class="content-product-a" href="xoa-san-pham/2.html">
-                        Xóa
-                    </a>
-                </td>
-            </tr>
+            <?php endforeach; ?>
 
             <tr>
                 <td colspan="5" style="text-align: right">
                     Tổng giá trị đơn hàng:
-                    <span class="product-price">
-                                            46 vnđ
-                                                </span>
+            <span class="product-price">
+             <?php echo number_format($total_cart); ?> vnđ
+            </span>
                 </td>
             </tr>
             <tr>

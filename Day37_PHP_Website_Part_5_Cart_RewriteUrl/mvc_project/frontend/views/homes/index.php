@@ -1,4 +1,5 @@
 <?php
+//views/homes/index.php
 require_once 'helpers/Helper.php';
 ?>
 <!--    PRODUCT-->
@@ -26,8 +27,10 @@ require_once 'helpers/Helper.php';
                     <span class="shop-price">
                             <?php echo number_format($product['price']) ?>
                 </span>
-
-                    <span class="add-to-cart">
+<!--                    Tạo dấu hiệu nhận biết để khi gọi ajax
+                    sẽ lấy đc đúng id của sp vừa click-->
+                    <span class="add-to-cart"
+                          data-id="<?php echo $product['id']?>">
                         <a href="#" style="color: inherit">Thêm vào giỏ</a>
                     </span>
                 </div>
