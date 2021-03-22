@@ -58,6 +58,39 @@ class CartController extends Controller
 
   //Giỏ hàng của bạn
   public function index() {
+
+    // Xử lý submit form, cập nhật giỏ hàng
+    // + Debug
+    echo "<pre>";
+    print_r($_POST);
+    echo "</pre>";
+    // + Xử lý submit
+    if (isset($_POST['submit'])) {
+      // Xử lý với trường hợp số lượng là số âm
+      foreach ($_POST AS $product_id => $quantity) {
+        if ($quantity < 0) {
+          $_SESSION['error'] = 'Số lượng phải > 0';
+          header('Location: gio-hang-cua-ban.html');
+          exit();
+        }
+      }
+
+      // Debug mảng giỏ hàng
+      echo "<pre>";
+      print_r($_SESSION['cart']);
+      echo "</pre>";
+      // Lặp giỏ hàng, gán lại số lượng của sp
+      //bằng số lượng gửi lên từ form, dựa theo
+      //product_id
+      foreach ($_SESSION['cart']
+               AS $product_id => $cart){
+        // Update lại số lượng tương ứng
+        $_SESSION['cart'][$product_id]['quantity']
+            = $_POST[$product_id];
+      }
+      $_SESSION['success'] = 'Cập nhật giỏ thành công';
+    }
+
     // Gọi layout để hiển thị view
     $this->content =
     $this->render('views/carts/index.php');
