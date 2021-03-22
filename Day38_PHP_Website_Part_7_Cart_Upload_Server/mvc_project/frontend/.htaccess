@@ -1,0 +1,12 @@
+#.htaccess, cugnf cấp với file index gốc
+# File này có tác dụng cấu hình hệ thống
+# Demo việc rewrite URL sử dụng .htaccess
+# Rewrite URL: viết lại URL thân thiện với
+# user và bộ máy tìm kiếm
+#https://vnexpress.net/hoc-mon-binh-chanh-nha-be-du-kien-thanh-quan-truoc-2025-4248920.html
+# File nhạy cảm, ko đc sửa tùy tiện
+RewriteEngine On
+# Bản chất của Rewrite URL: có 1 url giả (thân)
+# thiện, url này tương ứng với url mvc
+RewriteRule gio-hang-cua-ban.html index.php?controller=cart&action=index
+RewriteRule san-pham/([0-9]+).html index.php?controller=product&action=detail&id=$1
