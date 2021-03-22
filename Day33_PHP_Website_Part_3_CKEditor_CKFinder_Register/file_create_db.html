@@ -29,7 +29,7 @@ seo_keywords VARCHAR(255) COMMENT "Các từ khóa seo",
 created_at TIMESTAMP DEFAULT  CURRENT_TIMESTAMP COMMENT "Ngày tạo",
 updated_at DATETIME COMMENT "Ngày cập nhật cuối",
 PRIMARY KEY (id),
-FOREIGN KEY (category_id) REFERENCES categories(id)
+#FOREIGN KEY (category_id) REFERENCES categories(id)
 );
 
 #news
@@ -47,7 +47,7 @@ seo_keywords VARCHAR(255) COMMENT "Các từ khóa seo",
 created_at TIMESTAMP DEFAULT  CURRENT_TIMESTAMP COMMENT "Ngày tạo",
 updated_at DATETIME COMMENT "Ngày cập nhật cuối",
 PRIMARY KEY (id),
-FOREIGN KEY (category_id) REFERENCES categories(id)
+#FOREIGN KEY (category_id) REFERENCES categories(id)
 );
 
 #users
@@ -84,14 +84,14 @@ payment_status TINYINT(2) COMMENT "Trạng thái đơn hàng: 0 - Chưa thành t
 created_at TIMESTAMP DEFAULT  CURRENT_TIMESTAMP COMMENT "Ngày tạo đơn",
 updated_at DATETIME COMMENT "Ngày cập nhật cuối",
 PRIMARY KEY (id),
-FOREIGN KEY (user_id) REFERENCES users(id)
+#FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 #order_details
-CREATE TABLE IF NOT EXISTS order_details1(
+CREATE TABLE IF NOT EXISTS order_details(
 order_id INT(11) COMMENT "Id của order tương ứng, là khóa ngoại liên kết với bảng orders",
 product_name VARCHAR(150) COMMENT "Tên sp tại thời điểm đặt hàng",
 product_price INT(11) COMMENT "Giá sản phẩm tương ứng tại thời điểm đặt hàng",
 quantity INT(11) COMMENT "Số lượng sản phẩm tương ứng tại thời điểm đặt hàng",
-FOREIGN KEY (order_id) REFERENCES orders(id)
+#FOREIGN KEY (order_id) REFERENCES orders(id)
 );

@@ -96,4 +96,19 @@ class CartController extends Controller
     $this->render('views/carts/index.php');
     require_once 'views/layouts/main.php';
   }
+
+  public function delete() {
+    echo "<pre>";
+    print_r($_GET);
+    echo "</pre>";
+    // Xóa sản phẩm khỏi giỏ
+    echo "<pre>";
+    print_r($_SESSION['cart']);
+    echo "</pre>";
+    $product_id = $_GET['id'];
+    unset($_SESSION['cart'][$product_id]);
+    $_SESSION['success'] = 'Xóa sp thành công';
+    header('Location: gio-hang-cua-ban.html');
+    exit();
+  }
 }

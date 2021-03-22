@@ -9,4 +9,5 @@ RewriteEngine On
 # Bản chất của Rewrite URL: có 1 url giả (thân)
 # thiện, url này tương ứng với url mvc
 RewriteRule gio-hang-cua-ban.html index.php?controller=cart&action=index
-RewriteRule san-pham/([0-9]+).html index.php?controller=product&action=detail&id=$1
+#xoa-san-pham/7.html
+RewriteRule xoa-san-pham/([0-9]{1,}).html index.php?controller=cart&action=delete&id=$1
