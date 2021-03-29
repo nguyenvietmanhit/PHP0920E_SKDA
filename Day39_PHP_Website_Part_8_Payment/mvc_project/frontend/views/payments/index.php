@@ -59,7 +59,7 @@ require_once 'helpers/Helper.php';
                                 <?php endif; ?>
                                   <div class="content-product">
                                       <a href="<?php echo $product_link; ?>" class="content-product-a">
-                                        <?php echo $cart['name']; ?>
+                                        <?php echo $cart['title']; ?>
                                       </a>
                                   </div>
                               </td>
